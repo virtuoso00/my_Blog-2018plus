@@ -1,9 +1,9 @@
----
-layout: post
-title: "IKBC Poker2 加灯历程"
-date: "2018-01-20"
-description: "记录我为我的Poker2加上背光的过程，作为纪念"
-image: images/lighted-poker2/28.jpg
+# IKBC Poker2 加灯历程
+
+> 记录我为我的Poker2加上背光的过程，作为纪念
+>
+> date: 2018-01-20
+
 ---
 
 首先我特别想安利一波Poker2，Poker2是非常优雅的一款键盘。

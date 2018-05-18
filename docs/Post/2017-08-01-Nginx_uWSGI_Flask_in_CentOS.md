@@ -1,6 +1,9 @@
 # CentOS中通过Nginx和uWSGI部署Flask项目
-date: "2017-08-01"
-description: "部署Flask项目的新姿势"
+
+> 部署Flask项目的新姿势
+>
+> date: 2017-08-01
+
 ---
 
 在之前的很长一段时间里，我部署Flask项目都是使用Flask自带的服务器的。在开发环境中使用Flask自带的服务器还是相当方便的，但是在生产环境中使用这种简陋的服务器似乎并不大好（虽然我也不知道哪里不好）。不管怎么说，为了提高自己的知识水平，我也费了一天的时间稍微学习了一点人生的经验——*Nginx和uWSGI*
@@ -52,7 +55,7 @@ pip install uwsgi
 
 通过`uwsgi --version`检验是否安装成功。
 
-*Ubuntu下是
+\*Ubuntu下是
 
 ```
 apt-get install python-dev
@@ -71,7 +74,7 @@ yum install nginx
 
 然后通过`nginx -v`检验是否安装成功。
 
-*Ubuntu直接使用apt即可
+\*Ubuntu直接使用apt即可
 
 ```
 apt-get install nginx
@@ -158,7 +161,7 @@ Nginx的命令参数不多，常用的有一下几种
 
 Nginx主要依靠配置文件配置。我们打开Nginx的默认配置文件，一般是/etc/nginx/nginx.conf。具体文件位置可以通过`nginx -t`命令查看。默认配置文件大部分是加注释的，我们修改一部分。
 
-```
+```conf
 http{
     server {
         listen       80;

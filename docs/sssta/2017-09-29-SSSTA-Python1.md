@@ -1,4 +1,10 @@
-# SS::STA - Python入门1
+# Python入门1
+
+> SS::STA第一次活动，关于Python的初步认识
+>
+> date: 2017-09-29
+
+---
 
 > [点击此链接]({{ site.assets_url }}/data/SSSTA%20-%20Python%E5%85%A5%E9%97%A81%20-%20%E7%BD%97%E9%98%B3%E8%B1%AA.zip)，下载该篇所涉及的源代码
 

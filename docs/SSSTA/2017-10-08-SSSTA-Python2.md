@@ -1,8 +1,9 @@
----
-layout: post
-title: "SS::STA - Python入门2"
-date: "2017-10-08"
-description: "SS::STA第二次活动前半部分，关于Python入门"
+# Python入门2
+
+> SS::STA第二次活动前半部分，关于Python入门
+>
+> date: 2017-10-08
+
 ---
 
 ## 安全须知一

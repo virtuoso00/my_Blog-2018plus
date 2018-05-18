@@ -1,8 +1,9 @@
----
-layout: post
-title: "HTTP/1.1 - 状态码定义"
-date: "2017-12-19"
-description: "对 Hypertext Transfer Protocol -- HTTP/1.1 中关于状态码定义的翻译"
+# HTTP/1.1 - 状态码定义
+
+> 对 Hypertext Transfer Protocol -- HTTP/1.1 中关于状态码定义的翻译
+>
+> date: 2017-12-19
+
 ---
 
 > part of [Hypertext Transfer Protocol -- HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)  
