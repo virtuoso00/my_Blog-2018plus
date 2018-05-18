@@ -1,0 +1,1244 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content=""关于如何使用Python发送邮件的一点学习总结"">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="en, jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>"使用Python的smtplib和email发送邮件"</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#smtplib" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="KeybrL's Blog" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">code</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                KeybrL's Blog
+              </span>
+              <span class="md-header-nav__topic">
+                "使用Python的smtplib和email发送邮件"
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Keyboard-l/my_Blog-2018plus/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Keyboard-l/my_Blog-2018plus
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">code</i>
+      
+    </span>
+    KeybrL's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Keyboard-l/my_Blog-2018plus/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Keyboard-l/my_Blog-2018plus
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to MkDocs" class="md-nav__link">
+      Welcome to MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Post
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Post
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-10-22-John-Von-Nouma/" title="2016 10 22 John Von Nouma" class="md-nav__link">
+      2016 10 22 John Von Nouma
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-11-13-The-base-of-grammar-in-Markdown/" title=""Markdown语法基础"" class="md-nav__link">
+      "Markdown语法基础"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-12-30-C-study/" title=""C语言上机心得"" class="md-nav__link">
+      "C语言上机心得"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        "使用Python的smtplib和email发送邮件"
+      </label>
+    
+    <a href="./" title=""使用Python的smtplib和email发送邮件"" class="md-nav__link md-nav__link--active">
+      "使用Python的smtplib和email发送邮件"
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#smtplib" title="smtplib" class="md-nav__link">
+    smtplib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" title="email" class="md-nav__link">
+    email
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="发送文本邮件" class="md-nav__link">
+    发送文本邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="群发邮件" class="md-nav__link">
+    群发邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" title="发送HTML邮件" class="md-nav__link">
+    发送HTML邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_1" title="发送带图片的HTML邮件" class="md-nav__link">
+    发送带图片的HTML邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="发送带有附件的邮件" class="md-nav__link">
+    发送带有附件的邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="来玩一票大的吧" class="md-nav__link">
+    来玩一票大的吧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="做点总结" class="md-nav__link">
+    做点总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-04-30-Project-Game_or_Life/" title="2017 04 30 Project Game or Life" class="md-nav__link">
+      2017 04 30 Project Game or Life
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-08-01-Nginx_uWSGI_Flask_in_CentOS/" title="2017 08 01 Nginx uWSGI Flask in CentOS" class="md-nav__link">
+      2017 08 01 Nginx uWSGI Flask in CentOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-11-19-Project-Coin/" title="2017 11 19 Project Coin" class="md-nav__link">
+      2017 11 19 Project Coin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-12-19-HTTP11-Status-Code-Definitions-en/" title="2017 12 19 HTTP11 Status Code Definitions en" class="md-nav__link">
+      2017 12 19 HTTP11 Status Code Definitions en
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-12-19-HTTP11-Status-Code-Definitions-zh/" title="2017 12 19 HTTP11 Status Code Definitions zh" class="md-nav__link">
+      2017 12 19 HTTP11 Status Code Definitions zh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-01-20-lighted-poker2/" title="2018 01 20 lighted poker2" class="md-nav__link">
+      2018 01 20 lighted poker2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-03-03-siphon/" title="2018 03 03 siphon" class="md-nav__link">
+      2018 03 03 siphon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      SSSTA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        SSSTA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2017-10-08-SSSTA-Blog/" title="2017 10 08 SSSTA Blog" class="md-nav__link">
+      2017 10 08 SSSTA Blog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2017-10-08-SSSTA-Python2/" title="2017 10 08 SSSTA Python2" class="md-nav__link">
+      2017 10 08 SSSTA Python2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2017-11-12-SSSTA-Web1/" title="2017 11 12 SSSTA Web1" class="md-nav__link">
+      2017 11 12 SSSTA Web1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2017-11-19-SSSTA-Web2.0/" title="2017 11 19 SSSTA Web2.0" class="md-nav__link">
+      2017 11 19 SSSTA Web2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2017-12-03-SSSTA-Web3/" title="2017 12 03 SSSTA Web3" class="md-nav__link">
+      2017 12 03 SSSTA Web3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2017-12-03-SSSTA-Web4.0/" title="2017 12 03 SSSTA Web4.0" class="md-nav__link">
+      2017 12 03 SSSTA Web4.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/2018-01-19-SSSTA-Web-list2017/" title="2018 01 19 SSSTA Web list2017" class="md-nav__link">
+      2018 01 19 SSSTA Web list2017
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSSTA/SSSTA%20-%20Python%E5%85%A5%E9%97%A81/" title="SSSTA   Python入门1" class="md-nav__link">
+      SSSTA   Python入门1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#smtplib" title="smtplib" class="md-nav__link">
+    smtplib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" title="email" class="md-nav__link">
+    email
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="发送文本邮件" class="md-nav__link">
+    发送文本邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="群发邮件" class="md-nav__link">
+    群发邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" title="发送HTML邮件" class="md-nav__link">
+    发送HTML邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_1" title="发送带图片的HTML邮件" class="md-nav__link">
+    发送带图片的HTML邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="发送带有附件的邮件" class="md-nav__link">
+    发送带有附件的邮件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="来玩一票大的吧" class="md-nav__link">
+    来玩一票大的吧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="做点总结" class="md-nav__link">
+    做点总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Keyboard-l/my_Blog-2018plus/blob/master/_docs/Post/2017-04-09-Use-smtplib-and-email-in-python-to-send-email.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>"使用Python的smtplib和email发送邮件"</h1>
+                
+                <blockquote>
+<p><em>smtplib</em>和<em>email</em>是<em>Python</em>的两个官方库</p>
+</blockquote>
+<p>花了一天时间了解了一下在Python中如何发送电子邮件，了解不深，基本只稍微知道如何使用，在此做个总结以作备忘。</p>
+<p>发送电子邮件对于服务器来说是十分重要的，邮箱验证、邮件通知等都涉及到服务器自动发送邮件，除了可以购买各大云服务器厂商的邮件服务，也可以自己写邮件收发的应用，本文首先讲讲邮件的发送。</p>
+<h2 id="smtplib">smtplib</h2>
+<blockquote>
+<p>smtplib即SMTP的Library</p>
+<p>SMTP(<em>Simple Mail Transfer Protocol</em>)</p>
+<p>简单的 基于文本的 用于规范邮件发送的 协议</p>
+</blockquote>
+<p>简单地讲SMTP就是一种对邮件的纯文本格式和传输的规定。它通过指定的端口，加密方式，用指定账号、密码登录的SMTP服务器，收件方地址等传输邮件的纯文本格式。</p>
+<p>Python的smtplib主要负责传输部分，使用smtplib发送邮件仅需要短短几行代码。</p>
+<pre><code class="python">import smtplib
+
+server = smtplib.SMTP(host, port)  # 创建一个SMTP类
+server.starttls()  # 使用STARTTLS对明文进行加密，明文通信时应去掉该行
+server.set_debuglevel(False)  # 调试等级，即是否显示发送过程的某些信息
+server.login(user, password)  # 登录SMTP服务器
+server.sendmail(from_addr, to_addr, msg.as_string())  # 发送邮件
+server.quit()  # 关闭SMTP服务器
+</code></pre>
+
+<p><code>host</code>即SMTP服务器的地址，常见的如</p>
+<ul>
+<li>smtp-mail.outlook.com  <em>Outlook邮箱</em></li>
+<li>smtp.qq.com  <em>QQ邮箱</em></li>
+<li>smtp.163.com  <em>163邮箱</em></li>
+</ul>
+<p><code>port</code>即SMTP服务器端口，一般情况下，25为明文通信，587为加密通信。部分SMTP服务器，如Outlook邮箱，不支持明文通信。</p>
+<p><code>user</code>和<code>password</code>即登陆SMTP服务器的用户名和密码，一般情况下，其与你登录该邮箱时的用户名和密码相同，但有些服务器有不同，如QQ邮箱使用QQ号和邮箱授权码登录。</p>
+<p><code>from_addr</code>和<code>to_addr</code>即发件方和收件方的邮箱地址</p>
+<p><code>msg</code>即该邮件的内容，具体见下文</p>
+<h2 id="email">email</h2>
+<p>由于SMTP设计之初是基于ASCII的纯文本的，对二进制文件处理得并不好，因此并不适合传输文件。由此产生了MIME扩展。</p>
+<blockquote>
+<p>MIME(<em>Multipurpose Internet Mail Extensions</em>)</p>
+<p>MIME使邮件几乎可以包含任何内容</p>
+</blockquote>
+<p>MIME是一套把各种文件编码为ASCII的规范，他使得用邮件传输各种<em>附件</em>成为可能。</p>
+<p>不过事实上，你并不需要具体知道MIME和SMTP所规定的邮件格式。</p>
+<p>在Python中你可以使用email来构建一个邮件，像这样</p>
+<pre><code class="python">from email.mime.text import MIMEText
+
+msg = MIMEText(text, subtype, charset)
+</code></pre>
+
+<p>可以看到<code>msg</code>即上文中SMTP所发送的那个<code>msg</code></p>
+<p><code>text</code>即邮件的文本内容，可为一般文本或HTML文本等</p>
+<p><code>subtype</code>即文本的格式，若为一般文本则为<code>'plain'</code>，若为HTML文本则为<code>'html'</code></p>
+<p><code>charset</code>即文本的文字编码，默认为<code>'us-ascii'</code>，如果邮件中含有中文内容，为了保证其对中文字符最大程度的支持，应将其设为<code>'utf-8'</code></p>
+<p>当然，如果你直接发送该邮件，你会发现邮件缺少发件人、收件人、主题等信息，这些信息其实是构建在邮件的<code>header</code>中的，你可以这样设置</p>
+<pre><code class="python">from email.header import Header
+from email.utils import formataddr
+
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))
+msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()
+</code></pre>
+
+<p><code>Header()</code>函数用于构建email的头部，传入该函数的参数应为<code>unicode</code>格式的</p>
+<p><code>formataddr()</code>可以将发件人名和发件地址组合成类似于<code>Keyboard &lt;keyboard-l@outlook.com&gt;</code>的标准格式，传入该函数的参数应为<code>utf-8</code>格式</p>
+<blockquote>
+<p>对呀，所以上面才要进行一堆麻烦的<code>decode()</code>和<code>encode()</code>操作</p>
+</blockquote>
+<p>所以们来发几个邮件试试吧</p>
+<h4 id="_1">发送文本邮件</h4>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+import smtplib
+from email.header import Header
+from email.mime.text import MIMEText
+from email.utils import formataddr
+
+
+from_name = 'Keyboard L'  # 发件人名
+from_addr = 'xxxxxx@outlook.com'  # 发件地址
+to_name = 'dalao'  # 收件人名
+to_addr = 'aaaaaa@qq.com'  # 收件地址
+subject = '试试发个邮件'  # 邮件主题
+text = '这是一份无聊的邮件的正文'  # 邮件正文
+
+password = '********'  # 邮箱密码
+smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
+
+
+msg = MIMEText(text, 'plain', 'utf-8')  # 创建邮件
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
+msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))  # 收件人
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
+
+# 发送
+server = smtplib.SMTP(smtp_server, 587)
+server.starttls()
+server.set_debuglevel(False)
+server.login(from_addr, password)
+server.sendmail(from_addr, to_addr, msg.as_string())
+server.quit()
+
+</code></pre>
+
+<p>嫌一个人不够？</p>
+<h4 id="_2">群发邮件</h4>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+import smtplib
+from email.header import Header
+from email.mime.text import MIMEText
+from email.utils import formataddr
+
+
+from_name = 'Keyboard L'  # 发件人名
+from_addr = 'xxxxxx@outlook.com'  # 发件地址
+to_addr = ['aaaaaa@qq.com', 'bbbbbb@qq.com', 'cccccc@qq.com', 'dddddd@qq.com', 'eeeeee@qq.com']  # 收件地址
+subject = '群发邮件'  # 邮件主题
+text = '这是一份无聊的邮件的正文'  # 邮件正文
+
+password = '********'  # 邮箱密码
+smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
+
+
+msg = MIMEText(text, 'plain', 'utf-8')  # 创建邮件
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
+
+# 发送
+server = smtplib.SMTP(smtp_server, 587)
+server.starttls()
+server.set_debuglevel(False)
+server.login(from_addr, password)
+server.sendmail(from_addr, to_addr, msg.as_string())
+server.quit()
+
+</code></pre>
+
+<p>好像没什么不同</p>
+<h4 id="html">发送HTML邮件</h4>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+import smtplib
+from email.header import Header
+from email.mime.text import MIMEText
+from email.utils import formataddr
+
+
+from_name = 'Keyboard L'  # 发件人名
+from_addr = 'xxxxxx@outlook.com'  # 发件地址
+to_name = 'dalao'  # 收件人名
+to_addr = 'aaaaaa@qq.com'  # 收件地址
+subject = '一份HTML'  # 邮件主题
+# 邮件正文
+text = &quot;&quot;&quot;\
+&lt;html lang=&quot;zh&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;style&gt;
+        h1{  color: red;  }
+        a{  color: blue;  }
+        p{  color: purple;  }
+        em{  color: grey;  }
+        /* 哇，好神奇的配色啊 */
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;一个超无聊的页面&lt;/h1&gt;
+    &lt;p&gt;这个页面真的&lt;em&gt;超无聊&lt;em&gt;啊&lt;/p&gt;
+    &lt;p&gt;还很丑&lt;/p&gt;
+    &lt;p&gt;From &lt;a href=&quot;https://keyboard-l.github.io/Keyboard-L&quot;&gt;Keyboard&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+
+password = '********'  # 邮箱密码
+smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
+
+
+msg = MIMEText(text, 'html', 'utf-8')  # 创建邮件
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
+msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))  # 收件人
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
+
+# 发送
+server = smtplib.SMTP(smtp_server, 587)
+server.starttls()
+server.set_debuglevel(False)
+server.login(from_addr, password)
+server.sendmail(from_addr, to_addr, msg.as_string())
+server.quit()
+
+</code></pre>
+
+<p>可以看到，跟上一份代码比，这不过是更换了邮件正文内容和<code>msg</code>的<code>subtype</code></p>
+<h4 id="html_1">发送带图片的HTML邮件</h4>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+import smtplib
+from email.header import Header
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.utils import formataddr
+
+
+from_name = 'Keyboard L'  # 发件人名
+from_addr = 'xxxxxx@outlook.com'  # 发件地址
+to_name = 'dalao'  # 收件人名
+to_addr = 'aaaaaa@qq.com'  # 收件地址
+subject = '带图片的HTML'  # 邮件主题
+# 邮件正文
+text = &quot;&quot;&quot;\
+&lt;html lang=&quot;zh&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;style&gt;
+        h1{  color: red;  }
+        a{  color: blue;  }
+        p{  color: purple;  }
+        em{  color: grey;  }
+        /* 哇，好神奇的配色啊 */
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;一个超无聊的页面&lt;/h1&gt;
+    &lt;img src=&quot;cid:image1&quot;&gt;
+    &lt;p&gt;这个页面真的&lt;em&gt;超无聊&lt;em&gt;啊&lt;/p&gt;
+    &lt;p&gt;还很丑&lt;/p&gt;
+    &lt;p&gt;From &lt;a href=&quot;https://keyboard-l.github.io/Keyboard-L&quot;&gt;Keyboard&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+
+password = '********'  # 邮箱密码
+smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
+
+
+msg = MIMEMultipart('related')  # 创建邮件
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
+msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))  # 收件人
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
+
+# 构造正文
+msgText = MIMEText(text, 'html', 'utf-8')
+msg.attach(msgText)
+
+# 导入图片
+fp = open('G:\\User\\Pictures\\qwe.png', 'rb')
+msgImage = MIMEImage(fp.read())
+fp.close()
+msgImage.add_header('Content-ID', '&lt;image1&gt;')
+msg.attach(msgImage)
+
+# 发送
+server = smtplib.SMTP(smtp_server, 587)
+server.starttls()
+server.set_debuglevel(False)
+server.login(from_addr, password)
+server.sendmail(from_addr, to_addr, msg.as_string())
+server.quit()
+
+</code></pre>
+
+<p>看起来复杂多了？慢慢捋捋吧。</p>
+<h4 id="_3">发送带有附件的邮件</h4>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+import smtplib
+from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.utils import formataddr
+import os
+
+
+from_name = 'Keyboard L'  # 发件人名
+from_addr = 'xxxxxx@outlook.com'  # 发件地址
+to_name = 'dalao'  # 收件人名
+to_addr = 'aaaaaa@qq.com'  # 收件地址
+subject = '带附件的文本'  # 邮件主题
+text = '这是一份无聊的邮件的正文'  # 邮件正文
+atta_url = 'G:\\a.png'  # 附件地址
+
+password = '********'  # 邮箱密码
+smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
+
+
+msg = MIMEMultipart('alternative')  # 创建邮件
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
+msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))  # 收件人
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
+
+# 构造正文
+msgText = MIMEText(text, 'plain', 'utf-8')
+msg.attach(msgText)
+
+# 构造附件
+msgAtta = MIMEText(open(atta_url, 'rb').read(), 'base64', 'utf-8')
+msgAtta[&quot;Content-Type&quot;] = 'application/octet-stream'
+msgAtta[&quot;Content-Disposition&quot;] = 'attachment; filename=&quot;%s&quot;' % (os.path.basename(atta_url),)
+msg.attach(msgAtta)
+
+
+# 发送
+server = smtplib.SMTP(smtp_server, 587)
+server.starttls()
+server.set_debuglevel(False)
+server.login(from_addr, password)
+server.sendmail(from_addr, to_addr, msg.as_string())
+server.quit()
+
+</code></pre>
+
+<p>其实不是很难，不是吗？</p>
+<h4 id="_4">来玩一票大的吧</h4>
+<blockquote>
+<p>发送各种东西</p>
+</blockquote>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+import smtplib
+from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.utils import formataddr
+import os
+
+
+from_name = 'Keyboard L'  # 发件人名
+from_addr = 'xxxxxx@outlook.com'  # 发件地址
+to_addr = ['aaaaaa@qq.com', 'bbbbbb@qq.com', 'cccccc@qq.com', 'dddddd@qq.com', 'eeeeee@qq.com']  # 收件地址
+subject = '一票大的'  # 邮件主题
+# 邮件正文
+text = '这仍是一份无聊的邮件的正文'
+html = &quot;&quot;&quot;\
+&lt;html lang=&quot;zh&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;style&gt;
+        h1{  color: red;  }
+        a{  color: blue;  }
+        p{  color: purple;  }
+        em{  color: grey;  }
+        /* 哇，好神奇的配色啊 */
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;一个超无聊的页面&lt;/h1&gt;
+    &lt;img src=&quot;cid:image1&quot;&gt;
+    &lt;p&gt;这个页面真的&lt;em&gt;超无聊&lt;em&gt;啊&lt;/p&gt;
+    &lt;p&gt;还很丑&lt;/p&gt;
+    &lt;p&gt;From &lt;a href=&quot;https://keyboard-l.github.io/Keyboard-L&quot;&gt;Keyboard&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+atta_url = ['G:\\a.py', 'G:\\User\\Pictures\\asd.png']  # 附件地址
+
+password = '********'  # 邮箱密码
+smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
+
+
+msg = MIMEMultipart('alternative')  # 创建邮件
+msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
+msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
+
+# 构造正文
+msgText = MIMEText(text, 'plain', 'utf-8')
+msg.attach(msgText)
+msgHTML = MIMEText(html, 'html', 'utf-8')
+msg.attach(msgHTML)
+
+# 导入图片
+fp = open('G:\\User\\Pictures\\qwe.png', 'rb')
+msgImage = MIMEImage(fp.read())
+fp.close()
+msgImage.add_header('Content-ID', '&lt;image1&gt;')
+msg.attach(msgImage)
+
+# 构造附件
+for url in atta_url:
+    msgAtta = MIMEText(open(url, 'rb').read(), 'base64', 'utf-8')
+    msgAtta[&quot;Content-Type&quot;] = 'application/octet-stream'
+    msgAtta[&quot;Content-Disposition&quot;] = 'attachment; filename=&quot;%s&quot;' % (os.path.basename(url),)
+    msg.attach(msgAtta)
+
+
+# 发送
+server = smtplib.SMTP(smtp_server, 587)
+server.starttls()
+server.set_debuglevel(False)
+server.login(from_addr, password)
+server.sendmail(from_addr, to_addr, msg.as_string())
+server.quit()
+
+</code></pre>
+
+<h2 id="_5">做点总结</h2>
+<p>看了几份代码，基本上应该能发现使用smtplib发送邮件的步骤是一样的，变的只是使用email构造邮件的方法。而且，构造邮件也是有一定相似之处的，首先创建邮件，然后加入头部的信息，然后将正文文本、HTML以及附带的图片、附件通过<code>.attach()</code>方法逐一加入到创建的邮件中去，如此便能构建出一份完整的邮件。</p>
+<blockquote>
+<p>所以说还是挺简单的嘛</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2016-12-30-C-study/" title=""C语言上机心得"" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                "C语言上机心得"
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../2017-04-30-Project-Game_or_Life/" title="2017 04 30 Project Game or Life" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                2017 04 30 Project Game or Life
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+            <script src="../../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

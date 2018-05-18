@@ -1,4 +1,20 @@
-site_name: KeybrL's Blog
+# Project information
+site_name: "KeybrL's Blog"
+site_url: 'http://blog.keybrl.ink/'
+repo_url: 'https://github.com/Keyboard-l/my_Blog-2018plus/'
+repo_name: 'Keyboard-l/my_Blog-2018plus'
+edit_uri: ''
+site_description: 'This site is the Blog of KeybrL.'
+site_author: 'KeybrL'
+copyright: 'Copyright &copy; 2018-2019 <a href="https://blog.keybrl.ink/">keybrl.ink</a> All Rights Reserved.'
+#google_analytics: null
+remote_branch: gh-pages
+#remote_name: origin
+
+# Documentation layout
+#pages:
+
+# Build directories
 theme:
     name: 'material'
     language: 'zh'
@@ -7,11 +23,21 @@ theme:
     palette:
         primary: 'teal'
         accent: 'teal'
+#docs_dir: 'docs'
+#site_dir: 'site'
+#extra_css: []
+#extra_javascript: []
+#extra_templates: []
 extra:
     search:
         language: 'en, jp'
     repo_icon: 'github'
-site_dir: 'docs'
-docs_dir: '_docs'
-repo_name: 'Keyboard-l/my_Blog-2018plus'
-repo_url: 'https://github.com/Keyboard-l/my_Blog-2018plus/'
+
+# Preview controls
+#use_directory_urls: true
+#strict: false
+dev_addr: 0.0.0.0:80
+
+# Formatting options
+#markdown_extensions: []
+#plugins: ['search']
