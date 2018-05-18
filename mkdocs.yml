@@ -2,14 +2,16 @@ site_name: KeybrL's Blog
 theme:
     name: 'material'
     language: 'zh'
-    favicon: 'baseline-code-24px.svg'
     logo:
         icon: 'code'
     palette:
-        primary: 'blue grey'
-        accent: 'light blue'
+        primary: 'teal'
+        accent: 'teal'
 extra:
     search:
         language: 'en, jp'
+    repo_icon: 'github'
 site_dir: 'docs'
 docs_dir: '_docs'
+repo_name: 'Keyboard-l/my_Blog-2018plus'
+repo_url: 'https://github.com/Keyboard-l/my_Blog-2018plus/'
