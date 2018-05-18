@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>"SS::STA Web3 - Python复习" - KeybrL's Blog</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\"SS::STA Web3 - Python\u590d\u4e60\"";
+    var mkdocs_page_input_path = "2017-12-03-SSSTA-Web3.md";
+    var mkdocs_page_url = "/2017-12-03-SSSTA-Web3/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> KeybrL's Blog</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome to MkDocs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2016-10-22-John-Von-Nouma/">"从冯·诺依曼体系结构启航"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2016-11-13-The-base-of-grammar-in-Markdown/">"Markdown语法基础"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2016-12-30-C-study/">"C语言上机心得"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-04-09-Use-smtplib-and-email-in-python-to-send-email/">"使用Python的smtplib和email发送邮件"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-04-30-Project-Game_or_Life/">"生命游戏"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-08-01-Nginx_uWSGI_Flask_in_CentOS/">"CentOS中通过Nginx和uWSGI部署Flask项目"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-09-29-SSSTA-Python1/">"SS::STA - Python入门1"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-10-08-SSSTA-Blog/">"SS::STA - 在GitHub上通过Jekyll搭建个人博客"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-10-08-SSSTA-Python2/">"SS::STA - Python入门2"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-11-12-SSSTA-Web1/">"SS::STA Web1 - Web应用概论"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-11-19-Project-Coin/">"概率神教 - 优秀的问题解决方案"</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-11-19-SSSTA-Web2.0/">"SS::STA Web2.0 - HTML与CSS入门"</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">"SS::STA Web3 - Python复习"</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">目的何在</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">作为开始</a></li>
+    
+
+    <li class="toctree-l2"><a href="#python">Python基础语法</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_3">代码基本形态</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">最基本的常用内建函数</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">类型与变量</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">运算符</a></li>
+        
+            <li><a class="toctree-l3" href="#_7">常用语句</a></li>
+        
+            <li><a class="toctree-l3" href="#_8">函数</a></li>
+        
+            <li><a class="toctree-l3" href="#_9">面向对象</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#_10">写在最后</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-12-03-SSSTA-Web4.0/">2017 12 03 SSSTA Web4.0</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-12-19-HTTP11-Status-Code-Definitions-en/">2017 12 19 HTTP11 Status Code Definitions en</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2017-12-19-HTTP11-Status-Code-Definitions-zh/">2017 12 19 HTTP11 Status Code Definitions zh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2018-01-19-SSSTA-Web-list2017/">2018 01 19 SSSTA Web list2017</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2018-01-20-lighted-poker2/">2018 01 20 lighted poker2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../2018-03-03-siphon/">2018 03 03 siphon</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">KeybrL's Blog</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>"SS::STA Web3 - Python复习"</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li>Python有什么用，我们用来做什么</li>
+<li>前期准备</li>
+<li>语法基础</li>
+</ul>
+<p>科协最开始的两次活动有来的同学，应该对Python不陌生。Python是一种解释型的计算机程序设计语言，他跟C语言一样好学。那么我们就不再宽泛地介绍Python这个语言了，大家可以自行Bing/Google了解。我们先很少地介绍Python的环境和编译运行方法，然后再介绍一下Python的列表、元组、字典和函数的使用。</p>
+<h2 id="_1">目的何在</h2>
+<blockquote>
+<p>我们为什么选择Python呢</p>
+</blockquote>
+<p>![Which Programming Language Should I Learn First]({{ site.assets_url }}/images/SSSTA-Web3/which-programming-language-should-i-learn-first-infographic.png)</p>
+<ul>
+<li>Python比较容易入门</li>
+<li>Python有易用的Web开发的框架</li>
+<li>Python有优雅的语法</li>
+</ul>
+<blockquote>
+<p>Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.</p>
+<p>– Linus Torvalds (creator of Linux)</p>
+</blockquote>
+<p>我们主要用Python搭建Web的服务端应用，也会用它略微了解socket编程、少量写些爬虫。它有很多网络库，所以如果你对互联网基础知识有更多兴趣，它也可以作为学习时不错的实践工具。除此之外，你还可以用它群发邮件骚扰同学或者写些小游戏打发时间。</p>
+<h2 id="_2">作为开始</h2>
+<p>作为开始，我们先再次讨论一下关于如何 <strong>开始使用Python</strong> 的问题（其实这些在科协第一次活动时已经介绍了，如果你们还记得）</p>
+<ul>
+<li>Python的环境准备：CPython解释器，包管理器pip</li>
+<li>关于合适的工具</li>
+<li>优雅的Python IDE：<a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+<li>趁手的文本编辑器：<a href="https://atom.io/">Atom</a>或<a href="http://www.sublimetext.com/">Sublime Text</a></li>
+<li>关于如何运行</li>
+<li>交互式解释器（REPL）， <code>py -3</code> (Windows)或 <code>python3</code> (Linux或MacOS)</li>
+<li>终端解释运行， <code>py -3 {{ filename }}</code> (Windows)或 <code>python3 {{ filename }}</code> (Linux或MacOS)</li>
+<li>IDE一键运行</li>
+</ul>
+<h2 id="python">Python基础语法</h2>
+<p>Python的语法和多数其他编程语言都很像</p>
+<h3 id="_3">代码基本形态</h3>
+<ul>
+<li>语句以换行结尾</li>
+<li>语句块以缩进表示</li>
+<li>大小写严格</li>
+</ul>
+<h3 id="_4">最基本的常用内建函数</h3>
+<ul>
+<li>输入输出： <code>input()</code> 和 <code>print()</code></li>
+<li>获取帮助： <code>help()</code></li>
+</ul>
+<h3 id="_5">类型与变量</h3>
+<p>常用的标准数据类型</p>
+<ul>
+<li>int、float、bool、str（整型、浮点型、布尔型、字符串）</li>
+<li>list、tuple（列表、元组）</li>
+<li>dict（字典）</li>
+<li>NoneType（啥也不是）</li>
+</ul>
+<p>Python的变量不需要显式类型声明，Python没有常量。</p>
+<blockquote>
+<p>Python的所有变量赋值（包括参数传递）都是 <strong>传递引用</strong></p>
+<p>Python是 <strong>强类型</strong> 和动态类型语言</p>
+</blockquote>
+<h3 id="_6">运算符</h3>
+<p>几种常用运算符</p>
+<ul>
+<li>代数运算符</li>
+<li>加、减、乘、除、模， <code>+ - * / %</code></li>
+<li>地板除、取余、乘方， <code>// **</code></li>
+<li>比较运算符</li>
+<li>大于、小于， <code>&gt; &lt;</code></li>
+<li>不大于、不小于， <code>&lt;= &gt;=</code></li>
+<li>等于、不等于， <code>== !=</code></li>
+<li>同一对象， <code>is</code></li>
+<li>逻辑运算符</li>
+<li>或、与、非， <code>or and not</code></li>
+</ul>
+<h3 id="_7">常用语句</h3>
+<ul>
+<li>条件</li>
+<li>if语句， <code>if</code> 、 <code>elif</code> 、 <code>else</code></li>
+<li>条件表达式（三元操作符）， <code>X if C else Y</code></li>
+<li>循环语句</li>
+<li>for 语句， <code>for ... in ...:</code></li>
+<li>while 语句， <code>while ...:</code></li>
+<li>错误与异常处理</li>
+<li>try-except-else-finally 语句</li>
+<li>上下文管理</li>
+<li>with 语句</li>
+</ul>
+<h3 id="_8">函数</h3>
+<ul>
+<li>函数定义</li>
+<li>函数的参数</li>
+<li>函数的变量作用域</li>
+<li>装饰器</li>
+</ul>
+<h3 id="_9">面向对象</h3>
+<p>...</p>
+<h2 id="_10">写在最后</h2>
+<p>真可怕，这里涉及那么多内容！</p>
+<p>推荐阅读</p>
+<blockquote>
+<p><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">Python教程 - 廖雪峰的官方网站</a></p>
+<p><a href="https://docs.python.org/3/">Python 3.6.3 documentation</a></p>
+<p><a href="http://carlcheo.com/startcoding">Which Programming Language Should I Learn First?</a>（那个图片的出处）</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2017-12-03-SSSTA-Web4.0/" class="btn btn-neutral float-right" title="2017 12 03 SSSTA Web4.0">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../2017-11-19-SSSTA-Web2.0/" class="btn btn-neutral" title=""SS::STA Web2.0 - HTML与CSS入门""><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../2017-11-19-SSSTA-Web2.0/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../2017-12-03-SSSTA-Web4.0/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
