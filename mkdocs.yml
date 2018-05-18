@@ -1,4 +1,15 @@
 site_name: KeybrL's Blog
-theme: readthedocs
+theme:
+    name: 'material'
+    language: 'zh'
+    favicon: 'baseline-code-24px.svg'
+    logo:
+        icon: 'code'
+    palette:
+        primary: 'blue grey'
+        accent: 'light blue'
+extra:
+    search:
+        language: 'en, jp'
 site_dir: 'docs'
 docs_dir: '_docs'
