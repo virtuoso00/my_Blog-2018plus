@@ -1,2 +1,7 @@
 site_name: KeybrL's Blog
+pages:
+    - ['post/index.md', 'hhh', 'hhh1']
+    - ['post/2016-10-22-John-Von-Nouma.md', 'hhh', 'hhh2']
 theme: readthedocs
+site_dir: 'docs'
+docs_dir: '_docs'
