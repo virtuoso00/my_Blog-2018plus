@@ -1,12 +1,10 @@
----
-layout: post
-title: "Markdown语法基础"
-date: "2016-11-13"
-description: "这是第一次使用Markdown时，对Markdown的基本语法都不了解，通过这一篇文章学习、尝试"
-image: images/The-base-of-grammar-in-Markdown/title_image.png
----
+# Markdown语法基础
 
-# Markdown
+> 这是第一次使用Markdown时，对Markdown的基本语法都不了解，通过这一篇文章学习、尝试
+>
+> date: 2016-11-13
+
+---
 
 > Markdown 是一种轻量级的标记语言
 

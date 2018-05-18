@@ -1,6 +1,4 @@
----
-layout: post
-title: "CentOS中通过Nginx和uWSGI部署Flask项目"
+# CentOS中通过Nginx和uWSGI部署Flask项目
 date: "2017-08-01"
 description: "部署Flask项目的新姿势"
 ---

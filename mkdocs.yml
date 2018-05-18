@@ -12,7 +12,17 @@ remote_branch: gh-pages
 #remote_name: origin
 
 # Documentation layout
-#pages:
+pages:
+    - Home: 'index.md'
+    - Post:
+        - '从冯·诺依曼体系结构起航': 'Post/2016-10-22-John-Von-Nouma.md'
+        - 'Markdown语法基础': 'Post/2016-11-13-The-base-of-grammar-in-Markdown.md'
+        - 'C语言上机心得': 'Post/2016-12-30-C-study.md'
+        - '使用Python的smtplib和email发送邮件': 'Post/2017-04-09-Use-smtplib-and-email-in-python-to-send-email.md'
+
+
+
+
 
 # Build directories
 theme:

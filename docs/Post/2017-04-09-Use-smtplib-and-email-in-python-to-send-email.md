@@ -1,31 +1,26 @@
----
-layout: post
-title: "使用Python的smtplib和email发送邮件"
-date: "2017-04-09"
-description: "关于如何使用Python发送邮件的一点学习总结"
+# 使用Python的smtplib和email发送邮件
+
+> 关于如何使用Python发送邮件的一点学习总结
+>
+> 2017-04-09
+
 ---
 
-> *smtplib*和*email*是*Python*的两个官方库
+> *smtplib* 和 *email* 是 *Python* 的两个官方库
 
 花了一天时间了解了一下在Python中如何发送电子邮件，了解不深，基本只稍微知道如何使用，在此做个总结以作备忘。
 
 发送电子邮件对于服务器来说是十分重要的，邮箱验证、邮件通知等都涉及到服务器自动发送邮件，除了可以购买各大云服务器厂商的邮件服务，也可以自己写邮件收发的应用，本文首先讲讲邮件的发送。
 
-
-
-
-
 ## smtplib
 
 > smtplib即SMTP的Library
 
-> SMTP(*Simple Mail Transfer Protocol*)
+> SMTP( *Simple Mail Transfer Protocol* )
 >
 > 简单的 基于文本的 用于规范邮件发送的 协议
 
 简单地讲SMTP就是一种对邮件的纯文本格式和传输的规定。它通过指定的端口，加密方式，用指定账号、密码登录的SMTP服务器，收件方地址等传输邮件的纯文本格式。
-
-
 
 Python的smtplib主要负责传输部分，使用smtplib发送邮件仅需要短短几行代码。
 
@@ -46,7 +41,6 @@ server.quit()  # 关闭SMTP服务器
 * smtp.qq.com  *QQ邮箱*
 * smtp.163.com  *163邮箱*
 
-
 `port`即SMTP服务器端口，一般情况下，25为明文通信，587为加密通信。部分SMTP服务器，如Outlook邮箱，不支持明文通信。
 
 `user`和`password`即登陆SMTP服务器的用户名和密码，一般情况下，其与你登录该邮箱时的用户名和密码相同，但有些服务器有不同，如QQ邮箱使用QQ号和邮箱授权码登录。
@@ -54,10 +48,6 @@ server.quit()  # 关闭SMTP服务器
 `from_addr`和`to_addr`即发件方和收件方的邮箱地址
 
 `msg`即该邮件的内容，具体见下文
-
-
-
-
 
 ## email
 
@@ -70,8 +60,6 @@ server.quit()  # 关闭SMTP服务器
 MIME是一套把各种文件编码为ASCII的规范，他使得用邮件传输各种*附件*成为可能。
 
 不过事实上，你并不需要具体知道MIME和SMTP所规定的邮件格式。
-
-
 
 在Python中你可以使用email来构建一个邮件，像这样
 
@@ -88,8 +76,6 @@ msg = MIMEText(text, subtype, charset)
 `subtype`即文本的格式，若为一般文本则为`'plain'`，若为HTML文本则为`'html'`
 
 `charset`即文本的文字编码，默认为`'us-ascii'`，如果邮件中含有中文内容，为了保证其对中文字符最大程度的支持，应将其设为`'utf-8'`
-
-
 
 当然，如果你直接发送该邮件，你会发现邮件缺少发件人、收件人、主题等信息，这些信息其实是构建在邮件的`header`中的，你可以这样设置
 
@@ -110,8 +96,6 @@ msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()
 
 所以们来发几个邮件试试吧
 
-
-
 #### 发送文本邮件
 
 ```python
@@ -122,7 +106,6 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.utils import formataddr
 
-
 from_name = 'Keyboard L'  # 发件人名
 from_addr = 'xxxxxx@outlook.com'  # 发件地址
 to_name = 'dalao'  # 收件人名
@@ -132,7 +115,6 @@ text = '这是一份无聊的邮件的正文'  # 邮件正文
 
 password = '********'  # 邮箱密码
 smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
-
 
 msg = MIMEText(text, 'plain', 'utf-8')  # 创建邮件
 msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
@@ -151,8 +133,6 @@ server.quit()
 
 嫌一个人不够？
 
-
-
 #### 群发邮件
 
 ```python
@@ -163,7 +143,6 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.utils import formataddr
 
-
 from_name = 'Keyboard L'  # 发件人名
 from_addr = 'xxxxxx@outlook.com'  # 发件地址
 to_addr = ['aaaaaa@qq.com', 'bbbbbb@qq.com', 'cccccc@qq.com', 'dddddd@qq.com', 'eeeeee@qq.com']  # 收件地址
@@ -172,7 +151,6 @@ text = '这是一份无聊的邮件的正文'  # 邮件正文
 
 password = '********'  # 邮箱密码
 smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
-
 
 msg = MIMEText(text, 'plain', 'utf-8')  # 创建邮件
 msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
@@ -190,8 +168,6 @@ server.quit()
 
 好像没什么不同
 
-
-
 #### 发送HTML邮件
 
 ```python
@@ -201,7 +177,6 @@ import smtplib
 from email.header import Header
 from email.mime.text import MIMEText
 from email.utils import formataddr
-
 
 from_name = 'Keyboard L'  # 发件人名
 from_addr = 'xxxxxx@outlook.com'  # 发件地址
@@ -234,7 +209,6 @@ text = """\
 password = '********'  # 邮箱密码
 smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
 
-
 msg = MIMEText(text, 'html', 'utf-8')  # 创建邮件
 msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
 msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))  # 收件人
@@ -252,8 +226,6 @@ server.quit()
 
 可以看到，跟上一份代码比，这不过是更换了邮件正文内容和`msg`的`subtype`
 
-
-
 #### 发送带图片的HTML邮件
 
 ```python
@@ -264,7 +236,6 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.utils import formataddr
-
 
 from_name = 'Keyboard L'  # 发件人名
 from_addr = 'xxxxxx@outlook.com'  # 发件地址
@@ -298,7 +269,6 @@ text = """\
 password = '********'  # 邮箱密码
 smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
 
-
 msg = MIMEMultipart('related')  # 创建邮件
 msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
 msg['To'] = formataddr((Header(to_name.decode(), 'utf-8').encode(), to_addr))  # 收件人
@@ -326,8 +296,6 @@ server.quit()
 ```
 
 看起来复杂多了？慢慢捋捋吧。
-
-
 
 #### 发送带有附件的邮件
 
@@ -382,8 +350,6 @@ server.quit()
 
 其实不是很难，不是吗？
 
-
-
 #### 来玩一票大的吧
 
 > 发送各种东西
@@ -433,7 +399,6 @@ atta_url = ['G:\\a.py', 'G:\\User\\Pictures\\asd.png']  # 附件地址
 password = '********'  # 邮箱密码
 smtp_server = 'smtp-mail.outlook.com'  # 邮件服务器
 
-
 msg = MIMEMultipart('alternative')  # 创建邮件
 msg['From'] = formataddr((Header(from_name.decode(), 'utf-8').encode(), from_addr))  # 发件人
 msg['Subject'] = Header(subject.decode('utf-8'), 'utf-8').encode()  # 主题
@@ -458,7 +423,6 @@ for url in atta_url:
     msgAtta["Content-Disposition"] = 'attachment; filename="%s"' % (os.path.basename(url),)
     msg.attach(msgAtta)
 
-
 # 发送
 server = smtplib.SMTP(smtp_server, 587)
 server.starttls()
@@ -468,10 +432,6 @@ server.sendmail(from_addr, to_addr, msg.as_string())
 server.quit()
 
 ```
-
-
-
-
 
 ## 做点总结
 
