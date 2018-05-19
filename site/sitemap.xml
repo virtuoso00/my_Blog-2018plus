@@ -18,43 +18,7 @@
     </url>
         
     <url>
-     <loc>http://blog.keybrl.ink//post/2016-10-22-John-Von-Nouma/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//post/2016-11-13-The-base-of-grammar-in-Markdown/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//post/2016-12-30-C-study/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//post/2017-04-09-Use-smtplib-and-email-in-python-to-send-email/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//post/2017-08-01-Nginx_uWSGI_Flask_in_CentOS/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//post/2017-12-19-HTTP11-Status-Code-Definitions-en/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//post/2017-12-19-HTTP11-Status-Code-Definitions-zh/</loc>
+     <loc>http://blog.keybrl.ink//post/2018-03-03-siphon/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -66,7 +30,49 @@
     </url>
         
     <url>
-     <loc>http://blog.keybrl.ink//post/2018-03-03-siphon/</loc>
+     <loc>http://blog.keybrl.ink//post/2017-12-19-HTTP11-Status-Code-Definitions-zh/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2017-12-19-HTTP11-Status-Code-Definitions-zh/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2017-12-19-HTTP11-Status-Code-Definitions-en/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2017-08-01-Nginx_uWSGI_Flask_in_CentOS/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2017-04-09-Use-smtplib-and-email-in-python-to-send-email/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2016-12-30-C-study/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2016-11-13-The-base-of-grammar-in-Markdown/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//post/2016-10-22-John-Von-Nouma/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -82,37 +88,7 @@
     </url>
         
     <url>
-     <loc>http://blog.keybrl.ink//sssta/2017-09-29-SSSTA-Python1/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//sssta/2017-10-08-SSSTA-Blog/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//sssta/2017-10-08-SSSTA-Python2/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//sssta/2017-11-12-SSSTA-Web1/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//sssta/2017-11-19-SSSTA-Web2.0/</loc>
-     <lastmod>2018-05-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//sssta/2017-12-03-SSSTA-Web3/</loc>
+     <loc>http://blog.keybrl.ink//sssta/2018-01-19-SSSTA-Web-list2017/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -124,7 +100,37 @@
     </url>
         
     <url>
-     <loc>http://blog.keybrl.ink//sssta/2018-01-19-SSSTA-Web-list2017/</loc>
+     <loc>http://blog.keybrl.ink//sssta/2017-12-03-SSSTA-Web3/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//sssta/2017-11-19-SSSTA-Web2.0/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//sssta/2017-11-12-SSSTA-Web1/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//sssta/2017-10-08-SSSTA-Python2/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//sssta/2017-10-08-SSSTA-Blog/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//sssta/2017-09-29-SSSTA-Python1/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
