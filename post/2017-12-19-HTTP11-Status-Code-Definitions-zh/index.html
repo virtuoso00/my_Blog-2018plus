@@ -275,8 +275,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="<b>导读</b>" class="md-nav__link">
-      <b>导读</b>
+    <a href="../" title="<b>Post-导读</b>" class="md-nav__link">
+      <b>Post-导读</b>
     </a>
   </li>
 
@@ -287,8 +287,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../2016-10-22-John-Von-Nouma/" title="从冯·诺依曼体系结构起航" class="md-nav__link">
-      从冯·诺依曼体系结构起航
+    <a href="../2018-03-03-siphon/" title="虹吸壶冲泡咖啡" class="md-nav__link">
+      虹吸壶冲泡咖啡
     </a>
   </li>
 
@@ -299,8 +299,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../2016-11-13-The-base-of-grammar-in-Markdown/" title="Markdown语法基础" class="md-nav__link">
-      Markdown语法基础
+    <a href="../2018-01-20-lighted-poker2/" title="IKBC Poker2 加灯历程" class="md-nav__link">
+      IKBC Poker2 加灯历程
     </a>
   </li>
 
@@ -311,45 +311,403 @@
 
 
   <li class="md-nav__item">
-    <a href="../2016-12-30-C-study/" title="C语言上机心得" class="md-nav__link">
-      C语言上机心得
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        HTTP/1.1 - 状态码定义
+      </label>
+    
+    <a href="./" title="HTTP/1.1 - 状态码定义" class="md-nav__link md-nav__link--active">
+      HTTP/1.1 - 状态码定义
     </a>
-  </li>
-
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-status-code-definitions" title="10 Status Code Definitions （状态码定义）" class="md-nav__link">
+    10 Status Code Definitions （状态码定义）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../2017-04-09-Use-smtplib-and-email-in-python-to-send-email/" title="使用Python的smtplib和email发送邮件" class="md-nav__link">
-      使用Python的smtplib和email发送邮件
-    </a>
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#101-informational-1xx" title="10.1 Informational 1xx （提示信息）" class="md-nav__link">
+    10.1 Informational 1xx （提示信息）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../2017-08-01-Nginx_uWSGI_Flask_in_CentOS/" title="CentOS中通过Nginx和uWSGI部署Flask项目" class="md-nav__link">
-      CentOS中通过Nginx和uWSGI部署Flask项目
-    </a>
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#1011-100-continue" title="10.1.1 100 Continue （继续）" class="md-nav__link">
+    10.1.1 100 Continue （继续）
+  </a>
+  
+</li>
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../2017-12-19-HTTP11-Status-Code-Definitions-en/" title="HTTP/1.1 - Status Code Definitions" class="md-nav__link">
-      HTTP/1.1 - Status Code Definitions
-    </a>
+          <li class="md-nav__item">
+  <a href="#1012-101-switching-protocols" title="10.1.2 101 Switching Protocols （切换协议）" class="md-nav__link">
+    10.1.2 101 Switching Protocols （切换协议）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-successful-2xx" title="10.2 Successful 2xx （成功）" class="md-nav__link">
+    10.2 Successful 2xx （成功）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1021-200-ok" title="10.2.1 200 OK （正常）" class="md-nav__link">
+    10.2.1 200 OK （正常）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1022-201-created" title="10.2.2 201 Created （已创建）" class="md-nav__link">
+    10.2.2 201 Created （已创建）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1023-202-accepted" title="10.2.3 202 Accepted （已接受）" class="md-nav__link">
+    10.2.3 202 Accepted （已接受）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1024-203-non-authoritative-information" title="10.2.4 203 Non-Authoritative Information （非权威信息）" class="md-nav__link">
+    10.2.4 203 Non-Authoritative Information （非权威信息）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1025-204-no-content" title="10.2.5 204 No Content （无内容）" class="md-nav__link">
+    10.2.5 204 No Content （无内容）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1026-205-reset-content" title="10.2.6 205 Reset Content （内容重置）" class="md-nav__link">
+    10.2.6 205 Reset Content （内容重置）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1027-206-partial-content" title="10.2.7 206 Partial Content （部分内容）" class="md-nav__link">
+    10.2.7 206 Partial Content （部分内容）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-redirection-3xx" title="10.3 Redirection 3xx （重定向）" class="md-nav__link">
+    10.3 Redirection 3xx （重定向）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-300-multiple-choices" title="10.3.1 300 Multiple Choices （多重选择）" class="md-nav__link">
+    10.3.1 300 Multiple Choices （多重选择）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1032-301-moved-permanently" title="10.3.2 301 Moved Permanently （永久转移）" class="md-nav__link">
+    10.3.2 301 Moved Permanently （永久转移）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1033-302-found" title="10.3.3 302 Found （已创建）" class="md-nav__link">
+    10.3.3 302 Found （已创建）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1034-303-see-other" title="10.3.4 303 See Other （查看其它）" class="md-nav__link">
+    10.3.4 303 See Other （查看其它）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1035-304-not-modified" title="10.3.5 304 Not Modified （未修改）" class="md-nav__link">
+    10.3.5 304 Not Modified （未修改）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1036-305-use-proxy" title="10.3.6 305 Use Proxy" class="md-nav__link">
+    10.3.6 305 Use Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1037-306-unused" title="10.3.7 306 (Unused) （已停止使用）" class="md-nav__link">
+    10.3.7 306 (Unused) （已停止使用）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1038-307-temporary-redirect" title="10.3.8 307 Temporary Redirect" class="md-nav__link">
+    10.3.8 307 Temporary Redirect
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-client-error-4xx" title="10.4 Client Error 4xx （客户端错误）" class="md-nav__link">
+    10.4 Client Error 4xx （客户端错误）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1041-400-bad-request" title="10.4.1 400 Bad Request" class="md-nav__link">
+    10.4.1 400 Bad Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1042-401-unauthorized" title="10.4.2 401 Unauthorized （未经许可）" class="md-nav__link">
+    10.4.2 401 Unauthorized （未经许可）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1043-402-payment-required" title="10.4.3 402 Payment Required （需要支付）" class="md-nav__link">
+    10.4.3 402 Payment Required （需要支付）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1044-403-forbidden" title="10.4.4 403 Forbidden （禁止访问）" class="md-nav__link">
+    10.4.4 403 Forbidden （禁止访问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1045-404-not-found" title="10.4.5 404 Not Found （未找到）" class="md-nav__link">
+    10.4.5 404 Not Found （未找到）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1046-405-method-not-allowed" title="10.4.6 405 Method Not Allowed （不允许的请求方法）" class="md-nav__link">
+    10.4.6 405 Method Not Allowed （不允许的请求方法）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1047-406-not-acceptable" title="10.4.7 406 Not Acceptable （不接受）" class="md-nav__link">
+    10.4.7 406 Not Acceptable （不接受）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1048-407-proxy-authentication-required" title="10.4.8 407 Proxy Authentication Required （要求验证代理身份）" class="md-nav__link">
+    10.4.8 407 Proxy Authentication Required （要求验证代理身份）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1049-408-request-timeout" title="10.4.9 408 Request Timeout （请求超时）" class="md-nav__link">
+    10.4.9 408 Request Timeout （请求超时）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10410-409-conflict" title="10.4.10 409 Conflict （访问冲突）" class="md-nav__link">
+    10.4.10 409 Conflict （访问冲突）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10411-410-gone" title="10.4.11 410 Gone" class="md-nav__link">
+    10.4.11 410 Gone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10412-411-length-required" title="10.4.12 411 Length Required （要求指示长度）" class="md-nav__link">
+    10.4.12 411 Length Required （要求指示长度）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10413-412-precondition-failed" title="10.4.13 412 Precondition Failed （先决条件未满足）" class="md-nav__link">
+    10.4.13 412 Precondition Failed （先决条件未满足）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10414-413-request-entity-too-large" title="10.4.14 413 Request Entity Too Large （请求实体过大）" class="md-nav__link">
+    10.4.14 413 Request Entity Too Large （请求实体过大）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10415-414-request-uri-too-long" title="10.4.15 414 Request-URI Too Long" class="md-nav__link">
+    10.4.15 414 Request-URI Too Long
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10416-415-unsupported-media-type" title="10.4.16 415 Unsupported Media Type" class="md-nav__link">
+    10.4.16 415 Unsupported Media Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10417-416-requested-range-not-satisfiable" title="10.4.17 416 Requested Range Not Satisfiable" class="md-nav__link">
+    10.4.17 416 Requested Range Not Satisfiable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10418-417-expectation-failed" title="10.4.18 417 Expectation Failed" class="md-nav__link">
+    10.4.18 417 Expectation Failed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105-server-error-5xx" title="10.5 Server Error 5xx" class="md-nav__link">
+    10.5 Server Error 5xx
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1051-500-internal-server-error" title="10.5.1 500 Internal Server Error" class="md-nav__link">
+    10.5.1 500 Internal Server Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1052-501-not-implemented" title="10.5.2 501 Not Implemented" class="md-nav__link">
+    10.5.2 501 Not Implemented
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1053-502-bad-gateway" title="10.5.3 502 Bad Gateway" class="md-nav__link">
+    10.5.3 502 Bad Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1054-503-service-unavailable" title="10.5.4 503 Service Unavailable" class="md-nav__link">
+    10.5.4 503 Service Unavailable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1055-504-gateway-timeout" title="10.5.5 504 Gateway Timeout" class="md-nav__link">
+    10.5.5 504 Gateway Timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1056-505-http-version-not-supported" title="10.5.6 505 HTTP Version Not Supported" class="md-nav__link">
+    10.5.6 505 HTTP Version Not Supported
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -767,8 +1125,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../2018-01-20-lighted-poker2/" title="IKBC Poker2 加灯历程" class="md-nav__link">
-      IKBC Poker2 加灯历程
+    <a href="../2017-12-19-HTTP11-Status-Code-Definitions-en/" title="HTTP/1.1 - Status Code Definitions" class="md-nav__link">
+      HTTP/1.1 - Status Code Definitions
     </a>
   </li>
 
@@ -779,8 +1137,56 @@
 
 
   <li class="md-nav__item">
-    <a href="../2018-03-03-siphon/" title="虹吸壶冲泡咖啡" class="md-nav__link">
-      虹吸壶冲泡咖啡
+    <a href="../2017-08-01-Nginx_uWSGI_Flask_in_CentOS/" title="CentOS中通过Nginx和uWSGI部署Flask项目" class="md-nav__link">
+      CentOS中通过Nginx和uWSGI部署Flask项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-04-09-Use-smtplib-and-email-in-python-to-send-email/" title="使用Python的smtplib和email发送邮件" class="md-nav__link">
+      使用Python的smtplib和email发送邮件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-12-30-C-study/" title="C语言上机心得" class="md-nav__link">
+      C语言上机心得
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-11-13-The-base-of-grammar-in-Markdown/" title="Markdown语法基础" class="md-nav__link">
+      Markdown语法基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-10-22-John-Von-Nouma/" title="从冯·诺依曼体系结构起航" class="md-nav__link">
+      从冯·诺依曼体系结构起航
     </a>
   </li>
 
@@ -815,8 +1221,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../sssta/" title="<b>导读</b>" class="md-nav__link">
-      <b>导读</b>
+    <a href="../../sssta/" title="<b>SS:STA-导读</b>" class="md-nav__link">
+      <b>SS:STA-导读</b>
     </a>
   </li>
 
@@ -827,68 +1233,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../sssta/2017-09-29-SSSTA-Python1/" title="Python入门1" class="md-nav__link">
-      Python入门1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sssta/2017-10-08-SSSTA-Blog/" title="在GitHub上通过Jekyll搭建个人博客" class="md-nav__link">
-      在GitHub上通过Jekyll搭建个人博客
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sssta/2017-10-08-SSSTA-Python2/" title="Python入门2" class="md-nav__link">
-      Python入门2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sssta/2017-11-12-SSSTA-Web1/" title="Web1 - Web应用概论" class="md-nav__link">
-      Web1 - Web应用概论
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sssta/2017-11-19-SSSTA-Web2.0/" title="Web2.0 - HTML与CSS入门" class="md-nav__link">
-      Web2.0 - HTML与CSS入门
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sssta/2017-12-03-SSSTA-Web3/" title="Web3 - Python复习" class="md-nav__link">
-      Web3 - Python复习
+    <a href="../../sssta/2018-01-19-SSSTA-Web-list2017/" title="Web 2017下半年活动内容清单" class="md-nav__link">
+      Web 2017下半年活动内容清单
     </a>
   </li>
 
@@ -911,8 +1257,68 @@
 
 
   <li class="md-nav__item">
-    <a href="../../sssta/2018-01-19-SSSTA-Web-list2017/" title="Web 2017下半年活动内容清单" class="md-nav__link">
-      Web 2017下半年活动内容清单
+    <a href="../../sssta/2017-12-03-SSSTA-Web3/" title="Web3 - Python复习" class="md-nav__link">
+      Web3 - Python复习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sssta/2017-11-19-SSSTA-Web2.0/" title="Web2.0 - HTML与CSS入门" class="md-nav__link">
+      Web2.0 - HTML与CSS入门
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sssta/2017-11-12-SSSTA-Web1/" title="Web1 - Web应用概论" class="md-nav__link">
+      Web1 - Web应用概论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sssta/2017-10-08-SSSTA-Python2/" title="Python入门2" class="md-nav__link">
+      Python入门2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sssta/2017-10-08-SSSTA-Blog/" title="在GitHub上通过Jekyll搭建个人博客" class="md-nav__link">
+      在GitHub上通过Jekyll搭建个人博客
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sssta/2017-09-29-SSSTA-Python1/" title="Python入门1" class="md-nav__link">
+      Python入门1
     </a>
   </li>
 
@@ -947,8 +1353,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../projects/" title="<b>导读</b>" class="md-nav__link">
-      <b>导读</b>
+    <a href="../../projects/" title="<b>Project-导读</b>" class="md-nav__link">
+      <b>Project-导读</b>
     </a>
   </li>
 
@@ -1790,7 +2196,7 @@ return 400 or 500 when DNS lookups time out.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../2017-12-19-HTTP11-Status-Code-Definitions-en/" title="HTTP/1.1 - Status Code Definitions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="./" title="HTTP/1.1 - 状态码定义" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1799,19 +2205,19 @@ return 400 or 500 when DNS lookups time out.</p>
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                HTTP/1.1 - Status Code Definitions
+                HTTP/1.1 - 状态码定义
               </span>
             </div>
           </a>
         
         
-          <a href="../2018-01-20-lighted-poker2/" title="IKBC Poker2 加灯历程" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2017-12-19-HTTP11-Status-Code-Definitions-en/" title="HTTP/1.1 - Status Code Definitions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                IKBC Poker2 加灯历程
+                HTTP/1.1 - Status Code Definitions
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
