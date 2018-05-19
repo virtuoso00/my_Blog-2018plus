@@ -68,5 +68,3 @@ dev_addr: 0.0.0.0:80
 # Formatting options
 markdown_extensions: ['admonition', 'markdown_newtab']
 #plugins: ['search']
-
-hhh: '123'
