@@ -275,6 +275,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../2016-10-22-John-Von-Nouma/" title="从冯·诺依曼体系结构起航" class="md-nav__link">
       从冯·诺依曼体系结构起航
     </a>
@@ -513,6 +525,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../sssta/" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../sssta/2017-09-29-SSSTA-Python1/" title="Python入门1" class="md-nav__link">
       Python入门1
     </a>
@@ -633,6 +657,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/2017-04-30-Project-Game_or_Life/" title="生命游戏" class="md-nav__link">
       生命游戏
     </a>
@@ -653,6 +689,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../donate/" title="Donate" class="md-nav__link">
+      Donate
+    </a>
   </li>
 
     
@@ -791,8 +839,8 @@
 <li>Nginx</li>
 <li>virtualenv（可选）</li>
 </ol>
-<p>所以我们首先安装python。可以通过<code>python --version</code>命令查看是否安装python及python版本，如果不是python 2.7请先安装或升级至Python 2.7版本。具体操作见<a href="https://www.python.org/">Python-Official Site</a></p>
-<p>然后安装Python的包管理器pip，当然，其他包管理器原则上也可以，但是我还是推荐使用pip。通过<code>pip --version</code>查看是否安装及版本。具体安装或更新操作见<a href="https://pip.pypa.io/en/latest/installing/">PyPI-get pip</a></p>
+<p>所以我们首先安装python。可以通过<code>python --version</code>命令查看是否安装python及python版本，如果不是python 2.7请先安装或升级至Python 2.7版本。具体操作见<a href="https://www.python.org/" target="_blank">Python-Official Site</a></p>
+<p>然后安装Python的包管理器pip，当然，其他包管理器原则上也可以，但是我还是推荐使用pip。通过<code>pip --version</code>查看是否安装及版本。具体安装或更新操作见<a href="https://pip.pypa.io/en/latest/installing/" target="_blank">PyPI-get pip</a></p>
 <h3 id="uwsgi">安装uWSGI</h3>
 <p>首先你可能需要安装一些乱七八糟的依赖</p>
 <pre><code>yum groupinstall &quot;Development Tools&quot;
@@ -850,7 +898,7 @@ if __name__ == &quot;__main__&quot;:
 <h2 id="uwsgi_1">配置uWSGI</h2>
 <p>uWSGI是一个实现了WSGI协议的Web服务器，我们用它来联系Flask应用与Nginx服务器。</p>
 <blockquote>
-<p>了解更多关于uWSGI的信息，可以查看<a href="http://uwsgi-docs.readthedocs.io/en/latest/">uWSGI的文档</a>（或者<a href="http://uwsgi-docs-cn.readthedocs.io/zh_CN/latest/">中文文档</a>）</p>
+<p>了解更多关于uWSGI的信息，可以查看<a href="http://uwsgi-docs.readthedocs.io/en/latest/" target="_blank">uWSGI的文档</a>（或者<a href="http://uwsgi-docs-cn.readthedocs.io/zh_CN/latest/" target="_blank">中文文档</a>）</p>
 </blockquote>
 <p>经过前面的操作，你已经安装了uWSGI，下面我们为uWSGI创建一个配置文件以避免输入一堆的参数</p>
 <p><strong>/root/myProject/Hello/uwsgiconfig.ini</strong></p>
@@ -884,7 +932,7 @@ stats = 127.0.0.1:9191
 <h2 id="nginx_1">配置Nginx</h2>
 <p>Nginx是一个高性能的http、反向代理或IMAP/POP3/SMTP服务器。我们拿他来直接接收和处理外网的请求。</p>
 <blockquote>
-<p>了解更多关于Nginx的信息，可以访问<a href="http://nginx.org/">Nginx-Official Site</a></p>
+<p>了解更多关于Nginx的信息，可以访问<a href="http://nginx.org/" target="_blank">Nginx-Official Site</a></p>
 </blockquote>
 <p>Nginx的命令参数不多，常用的有一下几种</p>
 <ul>

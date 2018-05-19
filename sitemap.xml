@@ -12,6 +12,12 @@
     
         
     <url>
+     <loc>http://blog.keybrl.ink//post/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://blog.keybrl.ink//post/2016-10-22-John-Von-Nouma/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
@@ -70,6 +76,12 @@
     
         
     <url>
+     <loc>http://blog.keybrl.ink//sssta/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://blog.keybrl.ink//sssta/2017-09-29-SSSTA-Python1/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
@@ -122,6 +134,12 @@
     
         
     <url>
+     <loc>http://blog.keybrl.ink//projects/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://blog.keybrl.ink//projects/2017-04-30-Project-Game_or_Life/</loc>
      <lastmod>2018-05-19</lastmod>
      <changefreq>daily</changefreq>
@@ -133,6 +151,14 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>http://blog.keybrl.ink//donate/</loc>
+     <lastmod>2018-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>

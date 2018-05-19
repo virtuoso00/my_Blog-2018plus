@@ -275,6 +275,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../2016-10-22-John-Von-Nouma/" title="从冯·诺依曼体系结构起航" class="md-nav__link">
       从冯·诺依曼体系结构起航
     </a>
@@ -803,6 +815,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../sssta/" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../sssta/2017-09-29-SSSTA-Python1/" title="Python入门1" class="md-nav__link">
       Python入门1
     </a>
@@ -923,6 +947,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/2017-04-30-Project-Game_or_Life/" title="生命游戏" class="md-nav__link">
       生命游戏
     </a>
@@ -943,6 +979,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../donate/" title="Donate" class="md-nav__link">
+      Donate
+    </a>
   </li>
 
     
@@ -1354,7 +1402,7 @@
 <p>date: 2017-12-19</p>
 </blockquote>
 <hr />
-<p>part of <a href="https://www.w3.org/Protocols/rfc2616/rfc2616.html">Hypertext Transfer Protocol -- HTTP/1.1</a><br />
+<p>part of <a href="https://www.w3.org/Protocols/rfc2616/rfc2616.html" target="_blank">Hypertext Transfer Protocol -- HTTP/1.1</a><br />
 RFC 2616 Fielding, et al.</p>
 <h2 id="10-status-code-definitions">10 Status Code Definitions</h2>
 <p>Each Status-Code is described below, including a description of which method(s) it can follow and any metainformation required in the response.</p>
@@ -1364,7 +1412,7 @@ RFC 2616 Fielding, et al.</p>
 <p>Proxies MUST forward 1xx responses, unless the connection between the proxy and its client has been closed, or unless the proxy itself requested the generation of the 1xx response. (For example, if a</p>
 <p>proxy adds a "Expect: 100-continue" field when it forwards a request, then it need not forward the corresponding 100 (Continue) response(s).)</p>
 <h4 id="1011-100-continue">10.1.1 100 Continue</h4>
-<p>The client SHOULD continue with its request. This interim response is used to inform the client that the initial part of the request has been received and has not yet been rejected by the server. The client SHOULD continue by sending the remainder of the request or, if the request has already been completed, ignore this response. The server MUST send a final response after the request has been completed. See section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html#sec8.2.3">8.2.3</a> for detailed discussion of the use and handling of this status code.</p>
+<p>The client SHOULD continue with its request. This interim response is used to inform the client that the initial part of the request has been received and has not yet been rejected by the server. The client SHOULD continue by sending the remainder of the request or, if the request has already been completed, ignore this response. The server MUST send a final response after the request has been completed. See section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html#sec8.2.3" target="_blank">8.2.3</a> for detailed discussion of the use and handling of this status code.</p>
 <h4 id="1012-101-switching-protocols">10.1.2 101 Switching Protocols</h4>
 <p>The server understands and is willing to comply with the client's request, via the Upgrade message header field (section 14.42), for a change in the application protocol being used on this connection. The server will switch protocols to those defined by the response's Upgrade header field immediately after the empty line which terminates the 101 response.</p>
 <p>The protocol SHOULD be switched only when it is advantageous to do so. For example, switching to a newer version of HTTP is advantageous over older versions, and switching to a real-time, synchronous protocol might be advantageous when delivering resources that use such features.</p>
@@ -1378,7 +1426,7 @@ RFC 2616 Fielding, et al.</p>
 <p>TRACE an entity containing the request message as received by the end server.</p>
 <h4 id="1022-201-created">10.2.2 201 Created</h4>
 <p>The request has been fulfilled and resulted in a new resource being created. The newly created resource can be referenced by the URI(s) returned in the entity of the response, with the most specific URI for the resource given by a Location header field. The response SHOULD include an entity containing a list of resource characteristics and location(s) from which the user or user agent can choose the one most appropriate. The entity format is specified by the media type given in the Content-Type header field. The origin server MUST create the resource before returning the 201 status code. If the action cannot be carried out immediately, the server SHOULD respond with 202 (Accepted) response instead.</p>
-<p>A 201 response MAY contain an ETag response header field indicating the current value of the entity tag for the requested variant just created, see section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19">14.19</a>.</p>
+<p>A 201 response MAY contain an ETag response header field indicating the current value of the entity tag for the requested variant just created, see section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19" target="_blank">14.19</a>.</p>
 <h4 id="1023-202-accepted">10.2.3 202 Accepted</h4>
 <p>The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place. There is no facility for re-sending a status code from an asynchronous operation such as this.</p>
 <p>The 202 response is intentionally non-committal. Its purpose is to allow a server to accept a request for some other process (perhaps a batch-oriented process that is only run once per day) without requiring that the user agent's connection to the server persist until the process is completed. The entity returned with this response SHOULD include an indication of the request's current status and either a pointer to a status monitor or some estimate of when the user can expect the request to be fulfilled.</p>
@@ -1391,7 +1439,7 @@ RFC 2616 Fielding, et al.</p>
 <h4 id="1026-205-reset-content">10.2.6 205 Reset Content</h4>
 <p>The server has fulfilled the request and the user agent SHOULD reset the document view which caused the request to be sent. This response is primarily intended to allow input for actions to take place via user input, followed by a clearing of the form in which the input is given so that the user can easily initiate another input action. The response MUST NOT include an entity.</p>
 <h4 id="1027-206-partial-content">10.2.7 206 Partial Content</h4>
-<p>The server has fulfilled the partial GET request for the resource. The request MUST have included a Range header field (section 14.35) indicating the desired range, and MAY have included an If-Range header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.27">14.27</a>) to make the request conditional.</p>
+<p>The server has fulfilled the partial GET request for the resource. The request MUST have included a Range header field (section 14.35) indicating the desired range, and MAY have included an If-Range header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.27" target="_blank">14.27</a>) to make the request conditional.</p>
 <p>The response MUST include the following header fields:</p>
 <ul>
 <li>Either a Content-Range header field (section 14.16) indicating<br />
@@ -1408,7 +1456,7 @@ differ from that sent in any previous response for the same<br />
 variant</li>
 </ul>
 <p>If the 206 response is the result of an If-Range request that used a strong cache validator (see section 13.3.3), the response SHOULD NOT include other entity-headers. If the response is the result of an If-Range request that used a weak validator, the response MUST NOT include other entity-headers; this prevents inconsistencies between cached entity-bodies and updated headers. Otherwise, the response MUST include all of the entity-headers that would have been returned with a 200 (OK) response to the same request.</p>
-<p>A cache MUST NOT combine a 206 response with other previously cached content if the ETag or Last-Modified headers do not match exactly, see <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.5.4">13.5.4</a>.</p>
+<p>A cache MUST NOT combine a 206 response with other previously cached content if the ETag or Last-Modified headers do not match exactly, see <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.5.4" target="_blank">13.5.4</a>.</p>
 <p>A cache that does not support the Range and Content-Range headers MUST NOT cache 206 (Partial) responses.</p>
 <h3 id="103-redirection-3xx">10.3 Redirection 3xx</h3>
 <p>This class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request. The action required MAY be carried out by the user agent without interaction with the user if and only if the method used in the second request is GET or HEAD. A client SHOULD detect infinite redirection loops, since such loops generate network traffic for each redirection.</p>
@@ -1460,7 +1508,7 @@ to a 302 response as described here for 303.</p>
 <ul>
 <li>Date, unless its omission is required by section 14.18.1</li>
 </ul>
-<p>If a clockless origin server obeys these rules, and proxies and clients add their own Date to any response received without one (as already specified by [RFC 2068], section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19">14.19</a>), caches will operate correctly.</p>
+<p>If a clockless origin server obeys these rules, and proxies and clients add their own Date to any response received without one (as already specified by [RFC 2068], section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19" target="_blank">14.19</a>), caches will operate correctly.</p>
 <ul>
 <li>ETag and/or Content-Location, if the header would have been sent<br />
 in a 200 response to the same request</li>
@@ -1490,7 +1538,7 @@ observing these limitations has significant security consequences.</p>
 <h4 id="1041-400-bad-request">10.4.1 400 Bad Request</h4>
 <p>The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.</p>
 <h4 id="1042-401-unauthorized">10.4.2 401 Unauthorized</h4>
-<p>The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource. The client MAY repeat the request with a suitable Authorization header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.8">14.8</a>). If the request already included Authorization credentials, then the 401 response indicates that authorization has been refused for those credentials. If the 401 response contains the same challenge as the prior response, and the user agent has already attempted authentication at least once, then the user SHOULD be presented the entity that was given in the response, since that entity might include relevant diagnostic information. HTTP access authentication is explained in "HTTP Authentication: Basic and Digest Access Authentication" <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec17.html#bib43">[43]</a>.</p>
+<p>The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource. The client MAY repeat the request with a suitable Authorization header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.8" target="_blank">14.8</a>). If the request already included Authorization credentials, then the 401 response indicates that authorization has been refused for those credentials. If the 401 response contains the same challenge as the prior response, and the user agent has already attempted authentication at least once, then the user SHOULD be presented the entity that was given in the response, since that entity might include relevant diagnostic information. HTTP access authentication is explained in "HTTP Authentication: Basic and Digest Access Authentication" <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec17.html#bib43" target="_blank">[43]</a>.</p>
 <h4 id="1043-402-payment-required">10.4.3 402 Payment Required</h4>
 <p>This code is reserved for future use.</p>
 <h4 id="1044-403-forbidden">10.4.4 403 Forbidden</h4>
@@ -1511,7 +1559,7 @@ an incoming response to determine if it is acceptable.</p>
 </blockquote>
 <p>If the response could be unacceptable, a user agent SHOULD temporarily stop receipt of more data and query the user for a decision on further actions.</p>
 <h4 id="1048-407-proxy-authentication-required">10.4.8 407 Proxy Authentication Required</h4>
-<p>This code is similar to 401 (Unauthorized), but indicates that the client must first authenticate itself with the proxy. The proxy MUST return a Proxy-Authenticate header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.33">14.33</a>) containing a challenge applicable to the proxy for the requested resource. The client MAY repeat the request with a suitable Proxy-Authorization header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.34">14.34</a>). HTTP access authentication is explained in "HTTP Authentication: Basic and Digest Access Authentication" <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec17.html#bib43">[43]</a>.</p>
+<p>This code is similar to 401 (Unauthorized), but indicates that the client must first authenticate itself with the proxy. The proxy MUST return a Proxy-Authenticate header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.33" target="_blank">14.33</a>) containing a challenge applicable to the proxy for the requested resource. The client MAY repeat the request with a suitable Proxy-Authorization header field (section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.34" target="_blank">14.34</a>). HTTP access authentication is explained in "HTTP Authentication: Basic and Digest Access Authentication" <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec17.html#bib43" target="_blank">[43]</a>.</p>
 <h4 id="1049-408-request-timeout">10.4.9 408 Request Timeout</h4>
 <p>The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time.</p>
 <h4 id="10410-409-conflict">10.4.10 409 Conflict</h4>
@@ -1534,7 +1582,7 @@ an incoming response to determine if it is acceptable.</p>
 <p>The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method.</p>
 <h4 id="10417-416-requested-range-not-satisfiable">10.4.17 416 Requested Range Not Satisfiable</h4>
 <p>A server SHOULD return a response with this status code if a request included a Range request-header field (section 14.35), and none of the range-specifier values in this field overlap the current extent of the selected resource, and the request did not include an If-Range request-header field. (For byte-ranges, this means that the first- byte-pos of all of the byte-range-spec values were greater than the current length of the selected resource.)</p>
-<p>When this status code is returned for a byte-range request, the response SHOULD include a Content-Range entity-header field specifying the current length of the selected resource (see section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.16">14.16</a>). This response MUST NOT use the multipart/byteranges content- type.</p>
+<p>When this status code is returned for a byte-range request, the response SHOULD include a Content-Range entity-header field specifying the current length of the selected resource (see section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.16" target="_blank">14.16</a>). This response MUST NOT use the multipart/byteranges content- type.</p>
 <h4 id="10418-417-expectation-failed">10.4.18 417 Expectation Failed</h4>
 <p>The expectation given in an Expect request-header field (see section 14.20) could not be met by this server, or, if the server is a proxy, the server has unambiguous evidence that the request could not be met by the next-hop server.</p>
 <h3 id="105-server-error-5xx">10.5 Server Error 5xx</h3>
@@ -1559,7 +1607,7 @@ to simply refuse the connection.</p>
 return 400 or 500 when DNS lookups time out.</p>
 </blockquote>
 <h4 id="1056-505-http-version-not-supported">10.5.6 505 HTTP Version Not Supported</h4>
-<p>The server does not support, or refuses to support, the HTTP protocol version that was used in the request message. The server is indicating that it is unable or unwilling to complete the request using the same major version as the client, as described in section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.1">3.1</a>, other than with this error message. The response SHOULD contain an entity describing why that version is not supported and what other protocols are supported by that server.</p>
+<p>The server does not support, or refuses to support, the HTTP protocol version that was used in the request message. The server is indicating that it is unable or unwilling to complete the request using the same major version as the client, as described in section <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.1" target="_blank">3.1</a>, other than with this error message. The response SHOULD contain an entity describing why that version is not supported and what other protocols are supported by that server.</p>
                 
                   
                 
