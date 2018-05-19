@@ -273,6 +273,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../post/" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../post/2016-10-22-John-Von-Nouma/" title="从冯·诺依曼体系结构起航" class="md-nav__link">
       从冯·诺依曼体系结构起航
     </a>
@@ -400,6 +412,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
         
           
           
@@ -579,6 +603,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/" title="<b>导读</b>" class="md-nav__link">
+      <b>导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/2017-04-30-Project-Game_or_Life/" title="生命游戏" class="md-nav__link">
       生命游戏
     </a>
@@ -599,6 +635,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../donate/" title="Donate" class="md-nav__link">
+      Donate
+    </a>
   </li>
 
     
@@ -667,7 +715,7 @@
 </blockquote>
 <hr />
 <blockquote>
-<p><a href="../{{ site.assets_url }}/data/Web4.0%20-%20%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80-%E6%A0%B7%E4%BE%8B%E9%A1%B5%E9%9D%A2%20-%20%E7%BD%97%E9%98%B3%E8%B1%AA.zip">点击此链接</a>，下载该篇所涉及的源代码</p>
+<p><a href="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/data/Web4.0%20-%20%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80-%E6%A0%B7%E4%BE%8B%E9%A1%B5%E9%9D%A2%20-%20%E7%BD%97%E9%98%B3%E8%B1%AA.zip" target="_blank">点击此链接</a>，下载该篇所涉及的源代码</p>
 </blockquote>
 <p>上上次我们演示的简单的页面是没有什么布局的，他们最多只能算文章，完全不能算是页面。而页面布局，基本是页面设计最难的地方，也是HTML和CSS的真正的主要工作</p>
 <p>所以我们这次看看一个Web前端页面是怎么布局的</p>
@@ -676,9 +724,9 @@
 <p>在很久很久以前，前端页面喜欢用 <code>&lt;table&gt;</code> 标签来实现一些布局，我喜欢叫它 <strong>table布局</strong>。这一个是因为当时前端对于页面布局的多样性缺乏想象力，再一个是因为当时没有更多的适合用于页面布局的工具。</p>
 <p>那么 <code>&lt;table&gt;</code> 怎么布局呢？</p>
 <p>这十分简单，你只需要在页面上画表格，然后把内容填进去，不管是图片还是文字还是又一个表格或是别的什么。这种方式在最初非常有效，前端开发人员用这种方法实现了很多拥有复杂布局的页面（其实一点也不复杂），它们中的一部分至今仍然存在。</p>
-<p>![西电物理实验教学中心]({{ site.assets_url }}/images/SSSTA-Web4/xidian_shiyan1.png)</p>
-<p>![西电物理实验教学中心]({{ site.assets_url }}/images/SSSTA-Web4/xidian_shiyan2.png)</p>
-<p>![西电物理实验教学中心]({{ site.assets_url }}/images/SSSTA-Web4/xidian_shiyan3.png)</p>
+<p><img alt="西电物理实验教学中心" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/xidian_shiyan1.png" /></p>
+<p><img alt="西电物理实验教学中心" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/xidian_shiyan2.png" /></p>
+<p><img alt="西电物理实验教学中心" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/xidian_shiyan3.png" /></p>
 <p><code>&lt;table&gt;</code> 非常有效，但是它已经被历史淘汰了。所以我们更关注table布局的不足和局限性</p>
 <p>table布局的主要问题在于复杂的布局需要使用大量的代码（其实并不大量），而且用语义的标签来充当布局的工具本身就是不太合适的一件事。table布局的页面一般都很不灵活，而且基本都是方方正正的样子（上个世代的页面风格），用 <code>&lt;table&gt;</code> 实现响应式布局几乎没法想象。</p>
 <h2 id="div">使用div布局</h2>
@@ -691,7 +739,7 @@
 <li>padding 内边距</li>
 <li>border 边框</li>
 </ul>
-<p>![盒子模型]({{ site.assets_url }}/images/SSSTA-Web4/box_model.png)</p>
+<p><img alt="盒子模型" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/box_model.png" /></p>
 <p>让盒子一层层嵌套，盒子在其父级元素中往左上角堆叠，并通过设置一定的内外边距控制盒子在父级元素中的位置以及盒子中元素的位置，由此可以实现各种灵活而优雅的布局。这样的布局也会被叫做 <strong>盒子布局</strong> 。</p>
 <p>阅读一个简单示例页面的源码（源码在文章开头所给链接中下载），可以大致了解这种布局的一般方式。</p>
                 
