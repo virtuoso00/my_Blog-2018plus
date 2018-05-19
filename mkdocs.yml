@@ -15,6 +15,7 @@ remote_branch: gh-pages
 pages:
     - Home: 'index.md'
     - Post:
+        - '<b>导读</b>': 'post/index.md'
         - '从冯·诺依曼体系结构起航': 'post/2016-10-22-John-Von-Nouma.md'
         - 'Markdown语法基础': 'post/2016-11-13-The-base-of-grammar-in-Markdown.md'
         - 'C语言上机心得': 'post/2016-12-30-C-study.md'
@@ -25,6 +26,7 @@ pages:
         - 'IKBC Poker2 加灯历程': 'post/2018-01-20-lighted-poker2.md'
         - '虹吸壶冲泡咖啡': 'post/2018-03-03-siphon.md'
     - SS::STA:
+        - '<b>导读</b>': 'sssta/index.md'
         - 'Python入门1': 'sssta/2017-09-29-SSSTA-Python1.md'
         - '在GitHub上通过Jekyll搭建个人博客': 'sssta/2017-10-08-SSSTA-Blog.md'
         - 'Python入门2': 'sssta/2017-10-08-SSSTA-Python2.md'
@@ -34,8 +36,10 @@ pages:
         - 'Web4.0 - 前端页面的布局': 'sssta/2017-12-03-SSSTA-Web4.0.md'
         - 'Web 2017下半年活动内容清单': 'sssta/2018-01-19-SSSTA-Web-list2017.md'
     - Project:
+        - '<b>导读</b>': 'projects/index.md'
         - '生命游戏': 'projects/2017-04-30-Project-Game_or_Life.md'
         - '概率神教 - 优秀的问题解决方案': 'projects/2017-11-19-Project-Coin.md'
+    - Donate: 'donate.md'
 
 # Build directories
 theme:
@@ -62,5 +66,7 @@ extra:
 dev_addr: 0.0.0.0:80
 
 # Formatting options
-#markdown_extensions: []
+markdown_extensions: ['admonition', 'markdown_newtab']
 #plugins: ['search']
+
+hhh: '123'

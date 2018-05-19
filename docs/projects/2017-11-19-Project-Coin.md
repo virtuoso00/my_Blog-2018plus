@@ -20,7 +20,7 @@
 
 他目前主要有3个功能
 
-![手机端效果预览]({{ site.assets_url }}/images/project_img/Coin/preview.png)
+![手机端效果预览](//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/project_img/Coin/preview.png)
 
 #### Coin
 
@@ -64,4 +64,4 @@
 
 虽然概率之神乐于为你指明方向且不需要酬劳，但是该项目的作者非常贫穷。如果你觉得该项目非常棒，而且你刚好有闲钱，你肯定很乐意打赏项目作者的。如果的确如此，你可以通过下方**微信赞赏码**向我打赏
 
-![扫码向我转账]({{ site.assets_url }}/images/project_img/Coin/donate.png)
+![扫码向我转账](//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/project_img/Coin/donate.png)
