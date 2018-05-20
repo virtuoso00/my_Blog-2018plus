@@ -14,20 +14,21 @@ remote_branch: gh-pages
 # Documentation layout
 pages:
     - Home: 'index.md'
-    - Post:
-        - '<b>Post-导读</b>': 'post/index.md'
-        - '虹吸壶冲泡咖啡': 'post/2018-03-03-siphon.md'
-        - 'IKBC Poker2 加灯历程': 'post/2018-01-20-lighted-poker2.md'
-        - 'HTTP/1.1 - 状态码定义': 'post/2017-12-19-HTTP11-Status-Code-Definitions-zh.md'
-        - 'HTTP/1.1 - 状态码定义': 'post/2017-12-19-HTTP11-Status-Code-Definitions-zh.md'
-        - 'HTTP/1.1 - Status Code Definitions': 'post/2017-12-19-HTTP11-Status-Code-Definitions-en.md'
-        - 'CentOS中通过Nginx和uWSGI部署Flask项目': 'post/2017-08-01-Nginx_uWSGI_Flask_in_CentOS.md'
-        - '使用Python的smtplib和email发送邮件': 'post/2017-04-09-Use-smtplib-and-email-in-python-to-send-email.md'
-        - 'C语言上机心得': 'post/2016-12-30-C-study.md'
-        - 'Markdown语法基础': 'post/2016-11-13-The-base-of-grammar-in-Markdown.md'
-        - '从冯·诺依曼体系结构起航': 'post/2016-10-22-John-Von-Nouma.md'
+    - Posts:
+        - '<b>Posts - 导读</b>': 'posts/index.md'
+        - '通过MkDocs搭建个人博客': 'posts/2018-05-19-mkdocs-blog.md'
+        - '虹吸壶冲泡咖啡': 'posts/2018-03-03-siphon.md'
+        - 'IKBC Poker2 加灯历程': 'posts/2018-01-20-lighted-poker2.md'
+        - 'HTTP/1.1 - 状态码定义': 'posts/2017-12-19-HTTP11-Status-Code-Definitions-zh.md'
+        - 'HTTP/1.1 - 状态码定义': 'posts/2017-12-19-HTTP11-Status-Code-Definitions-zh.md'
+        - 'HTTP/1.1 - Status Code Definitions': 'posts/2017-12-19-HTTP11-Status-Code-Definitions-en.md'
+        - 'CentOS中通过Nginx和uWSGI部署Flask项目': 'posts/2017-08-01-Nginx_uWSGI_Flask_in_CentOS.md'
+        - '使用Python的smtplib和email发送邮件': 'posts/2017-04-09-Use-smtplib-and-email-in-python-to-send-email.md'
+        - 'C语言上机心得': 'posts/2016-12-30-C-study.md'
+        - 'Markdown语法基础': 'posts/2016-11-13-The-base-of-grammar-in-Markdown.md'
+        - '从冯·诺依曼体系结构起航': 'posts/2016-10-22-John-Von-Nouma.md'
     - SS::STA:
-        - '<b>SS:STA-导读</b>': 'sssta/index.md'
+        - '<b>SS:STA - 导读</b>': 'sssta/index.md'
         - 'Web 2017下半年活动内容清单': 'sssta/2018-01-19-SSSTA-Web-list2017.md'
         - 'Web4.0 - 前端页面的布局': 'sssta/2017-12-03-SSSTA-Web4.0.md'
         - 'Web3 - Python复习': 'sssta/2017-12-03-SSSTA-Web3.md'
@@ -36,8 +37,8 @@ pages:
         - 'Python入门2': 'sssta/2017-10-08-SSSTA-Python2.md'
         - '在GitHub上通过Jekyll搭建个人博客': 'sssta/2017-10-08-SSSTA-Blog.md'
         - 'Python入门1': 'sssta/2017-09-29-SSSTA-Python1.md'
-    - Project:
-        - '<b>Project-导读</b>': 'projects/index.md'
+    - Projects:
+        - '<b>Projects - 导读</b>': 'projects/index.md'
         - '生命游戏': 'projects/2017-04-30-Project-Game_or_Life.md'
         - '概率神教 - 优秀的问题解决方案': 'projects/2017-11-19-Project-Coin.md'
     - Donate: 'donate.md'

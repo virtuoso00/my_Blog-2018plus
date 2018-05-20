@@ -7,7 +7,7 @@
 ## 主要内容
 
 该博客包含了Keyboard学习中的心得体会、知识的归纳总结、优秀读物的摘录还有SS::STA活动的教案。文章内容主要和Web相关  
-详见[Post](post/index.md)和[SS::STA](sssta/index.md)
+详见[Post](posts/index.md)和[SS::STA](sssta/index.md)
 
 学习就永远少不了练习，Keyboard为此写了很多垃圾代码，并且收录了部分在该博客中  
 详见[Project](projects/index.md)
