@@ -340,8 +340,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="好的开始" class="md-nav__link">
-    好的开始
+  <a href="#_2" title="好的开端" class="md-nav__link">
+    好的开端
   </a>
   
 </li>
@@ -809,8 +809,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="好的开始" class="md-nav__link">
-    好的开始
+  <a href="#_2" title="好的开端" class="md-nav__link">
+    好的开端
   </a>
   
 </li>
@@ -904,7 +904,45 @@
 <p><a href="" target="_blank">本文最后</a>有一个列表，列出了全部在本文出现的建议阅读的相关的官方文档和其它文章，它们对于读者建立完善、准确的认识将更有帮助。</p>
 </div>
 <h2 id="_1">准备工作</h2>
-<h2 id="_2">好的开始</h2>
+<p>MkDocs 是一个以 Python 实现的轻量化静态网站生成器</p>
+<p>所以，首先我们需要安装 Python ，在 Debian/Ubuntu 下只需要通过 apt 安装即可</p>
+<pre><code class="bash">apt install python
+</code></pre>
+
+<div class="admonition warning">
+<p class="admonition-title">兼容的Python版本</p>
+<blockquote>
+<p>官方文档的说明是：MkDocs supports Python versions 2.7, 3.3, 3.4, 3.5 and pypy.</p>
+</blockquote>
+<p>但事实上我用 Python 3.6 也没有任何问题，所以我建议首先尝试 Python 的最新稳定版，如果存在兼容问题再参考官方推荐</p>
+</div>
+<p>安装Python的第三方包管理器 pip</p>
+<pre><code class="bash">apt install python-pip
+</code></pre>
+
+<p>在Windows环境下安装 Python 和 pip 请参考 <a href="https://www.python.org" target="_blank">python.org</a></p>
+<p>然后通过 pip 安装 MkDocs</p>
+<pre><code class="bash">pip install mkdocs
+</code></pre>
+
+<p>检查安装情况</p>
+<pre><code class="bash">pip show mkdocs
+</code></pre>
+
+<p>如果有出现对 MkDocs 的简要描述即安装成功</p>
+<div class="admonition tip">
+<p class="admonition-title">强烈推荐WSL</p>
+<p>在 Windows 环境下进行与 Web 相关的开发经常都很不方便，如果既不喜欢虚拟机，又不习惯长时间在 Linux 下工作，又不想来回切换系统，那你一定要试试 WSL</p>
+<blockquote>
+<p>WSL: Windows Subsystem for Linux</p>
+</blockquote>
+<p>WSL 是 Windows 的 Linux 子系统，可以在 Windows 中运行 Linux 应用，它只能通过命令行进行交互，有兴趣自行 Google</p>
+</div>
+<h2 id="_2">好的开端</h2>
+<p>MkDocs 给我们提供了一种简单的创建 MkDocs 项目的方式</p>
+<pre><code class="bash">mkdocs new hhhh
+</code></pre>
+
 <h2 id="_3">跃动的思想</h2>
 <h2 id="_4">颜值即正义</h2>
 <h2 id="_5">尽在掌控</h2>

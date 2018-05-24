@@ -51,7 +51,55 @@ MkDocs是被设计用于构建文档的，所以它特别适于注重内容的�
 
 ## 准备工作
 
-## 好的开始
+MkDocs 是一个以 Python 实现的轻量化静态网站生成器
+
+所以，首先我们需要安装 Python ，在 Debian/Ubuntu 下只需要通过 apt 安装即可
+
+```bash
+apt install python
+```
+
+!!! Warning "兼容的Python版本"
+    > 官方文档的说明是：MkDocs supports Python versions 2.7, 3.3, 3.4, 3.5 and pypy.
+
+    但事实上我用 Python 3.6 也没有任何问题，所以我建议首先尝试 Python 的最新稳定版，如果存在兼容问题再参考官方推荐
+
+安装Python的第三方包管理器 pip
+
+```bash
+apt install python-pip
+```
+
+在Windows环境下安装 Python 和 pip 请参考 [python.org](https://www.python.org)
+
+然后通过 pip 安装 MkDocs
+
+```bash
+pip install mkdocs
+```
+
+检查安装情况
+
+```bash
+pip show mkdocs
+```
+
+如果有出现对 MkDocs 的简要描述即安装成功
+
+!!! Tip "强烈推荐WSL"
+    在 Windows 环境下进行与 Web 相关的开发经常都很不方便，如果既不喜欢虚拟机，又不习惯长时间在 Linux 下工作，又不想来回切换系统，那你一定要试试 WSL
+
+    > WSL: Windows Subsystem for Linux
+
+    WSL 是 Windows 的 Linux 子系统，可以在 Windows 中运行 Linux 应用，它只能通过命令行进行交互，有兴趣自行 Google
+
+## 好的开端
+
+MkDocs 给我们提供了一种简单的创建 MkDocs 项目的方式
+
+```bash
+mkdocs new hhhh
+```
 
 ## 跃动的思想
 
