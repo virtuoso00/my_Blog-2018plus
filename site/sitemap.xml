@@ -18,37 +18,19 @@
     </url>
         
     <url>
+     <loc>http://blog.keybrl.ink//posts/2018-05-24-python-markdown/</loc>
+     <lastmod>2018-05-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://blog.keybrl.ink//posts/2018-05-19-mkdocs-blog/</loc>
      <lastmod>2018-05-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://blog.keybrl.ink//posts/2018-03-03-siphon/</loc>
-     <lastmod>2018-05-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//posts/2018-01-20-lighted-poker2/</loc>
-     <lastmod>2018-05-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>http://blog.keybrl.ink//posts/2017-12-19-HTTP11-Status-Code-Definitions-zh/</loc>
-     <lastmod>2018-05-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//posts/2017-12-19-HTTP11-Status-Code-Definitions-zh/</loc>
-     <lastmod>2018-05-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://blog.keybrl.ink//posts/2017-12-19-HTTP11-Status-Code-Definitions-en/</loc>
      <lastmod>2018-05-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -79,6 +61,22 @@
         
     <url>
      <loc>http://blog.keybrl.ink//posts/2016-10-22-John-Von-Nouma/</loc>
+     <lastmod>2018-05-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://blog.keybrl.ink//repost/</loc>
+     <lastmod>2018-05-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//repost/2017-12-19-HTTP11-Status-Code-Definitions-en/</loc>
      <lastmod>2018-05-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -137,6 +135,28 @@
         
     <url>
      <loc>http://blog.keybrl.ink//sssta/2017-09-29-SSSTA-Python1/</loc>
+     <lastmod>2018-05-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://blog.keybrl.ink//boring/</loc>
+     <lastmod>2018-05-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//boring/2018-03-03-siphon/</loc>
+     <lastmod>2018-05-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://blog.keybrl.ink//boring/2018-01-20-lighted-poker2/</loc>
      <lastmod>2018-05-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
