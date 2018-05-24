@@ -17,8 +17,7 @@ pages:
     - Posts:
         - '<b>无聊所作 - 导读</b>': 'posts/index.md'
         - 'Python-Markdown支持的Markdown扩展（未完成）': 'posts/2018-05-24-python-markdown.md'
-        - '通过MkDocs搭建个人博客（未完成）': 'posts/2018-05-19-mkdocs-blog.md'
-
+        - '通过MkDocs搭建个人博客': 'posts/2018-05-19-mkdocs-blog.md'
         - 'HTTP/1.1 - 状态码定义（翻译）（未完成）': 'posts/2017-12-19-HTTP11-Status-Code-Definitions-zh.md'
         - 'CentOS中通过Nginx和uWSGI部署Flask项目': 'posts/2017-08-01-Nginx_uWSGI_Flask_in_CentOS.md'
         - '使用Python的smtplib和email发送邮件': 'posts/2017-04-09-Use-smtplib-and-email-in-python-to-send-email.md'
