@@ -1,0 +1,948 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This site is the Blog of KeybrL.">
+      
+      
+        <link rel="canonical" href="http://blog.keybrl.ink/sssta/2017-12-03-SSSTA-Web4.0/">
+      
+      
+        <meta name="author" content="KeybrL">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="en, jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Web4.0 - 前端页面的布局 - KeybrL's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#web40-" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://blog.keybrl.ink/" title="KeybrL's Blog" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">code</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                KeybrL's Blog
+              </span>
+              <span class="md-header-nav__topic">
+                Web4.0 - 前端页面的布局
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/keybrl/my_Blog-2018plus/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      keybrl/my_Blog-2018plus
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">code</i>
+      
+    </span>
+    KeybrL's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/keybrl/my_Blog-2018plus/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      keybrl/my_Blog-2018plus
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Posts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Posts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/" title="<b>无聊所作 - 导读</b>" class="md-nav__link">
+      <b>无聊所作 - 导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2018-05-24-python-markdown/" title="Python-Markdown支持的Markdown扩展（未完成）" class="md-nav__link">
+      Python-Markdown支持的Markdown扩展（未完成）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2018-05-19-mkdocs-blog/" title="通过MkDocs搭建个人博客" class="md-nav__link">
+      通过MkDocs搭建个人博客
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2017-12-19-HTTP11-Status-Code-Definitions-zh/" title="HTTP/1.1 - 状态码定义（翻译）（未完成）" class="md-nav__link">
+      HTTP/1.1 - 状态码定义（翻译）（未完成）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2017-08-01-Nginx_uWSGI_Flask_in_CentOS/" title="CentOS中通过Nginx和uWSGI部署Flask项目" class="md-nav__link">
+      CentOS中通过Nginx和uWSGI部署Flask项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2017-04-09-Use-smtplib-and-email-in-python-to-send-email/" title="使用Python的smtplib和email发送邮件" class="md-nav__link">
+      使用Python的smtplib和email发送邮件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2016-12-30-C-study/" title="C语言上机心得" class="md-nav__link">
+      C语言上机心得
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2016-11-13-The-base-of-grammar-in-Markdown/" title="Markdown语法基础" class="md-nav__link">
+      Markdown语法基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../posts/2016-10-22-John-Von-Nouma/" title="从冯·诺依曼体系结构起航" class="md-nav__link">
+      从冯·诺依曼体系结构起航
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Repost
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Repost
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repost/" title="<b>转载文章 - 导读</b>" class="md-nav__link">
+      <b>转载文章 - 导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repost/2017-12-19-HTTP11-Status-Code-Definitions-en/" title="HTTP/1.1 - Status Code Definitions" class="md-nav__link">
+      HTTP/1.1 - Status Code Definitions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Review of SS::STA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Review of SS::STA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="<b>SS:STA活动回顾 - 导读</b>" class="md-nav__link">
+      <b>SS:STA活动回顾 - 导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-01-19-SSSTA-Web-list2017/" title="Web 2017下半年活动内容清单" class="md-nav__link">
+      Web 2017下半年活动内容清单
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Web4.0 - 前端页面的布局
+      </label>
+    
+    <a href="./" title="Web4.0 - 前端页面的布局" class="md-nav__link md-nav__link--active">
+      Web4.0 - 前端页面的布局
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table" title="使用table布局" class="md-nav__link">
+    使用table布局
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#div" title="使用div布局" class="md-nav__link">
+    使用div布局
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="盒子模型" class="md-nav__link">
+    盒子模型
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-12-03-SSSTA-Web3/" title="Web3 - Python复习" class="md-nav__link">
+      Web3 - Python复习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-11-19-SSSTA-Web2.0/" title="Web2.0 - HTML与CSS入门" class="md-nav__link">
+      Web2.0 - HTML与CSS入门
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-11-12-SSSTA-Web1/" title="Web1 - Web应用概论" class="md-nav__link">
+      Web1 - Web应用概论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-10-08-SSSTA-Python2/" title="Python入门2" class="md-nav__link">
+      Python入门2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-10-08-SSSTA-Blog/" title="在GitHub上通过Jekyll搭建个人博客" class="md-nav__link">
+      在GitHub上通过Jekyll搭建个人博客
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-09-29-SSSTA-Python1/" title="Python入门1" class="md-nav__link">
+      Python入门1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Boring
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Boring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../boring/" title="<b>无聊的内容 - 导读</b>" class="md-nav__link">
+      <b>无聊的内容 - 导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../boring/2018-03-03-siphon/" title="虹吸壶冲泡咖啡" class="md-nav__link">
+      虹吸壶冲泡咖啡
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../boring/2018-01-20-lighted-poker2/" title="IKBC Poker2 加灯历程" class="md-nav__link">
+      IKBC Poker2 加灯历程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/" title="<b>垃圾代码 - 导读</b>" class="md-nav__link">
+      <b>垃圾代码 - 导读</b>
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/2017-04-30-Project-Game_or_Life/" title="生命游戏" class="md-nav__link">
+      生命游戏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/2017-11-19-Project-Coin/" title="概率神教 - 优秀的问题解决方案" class="md-nav__link">
+      概率神教 - 优秀的问题解决方案
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../donate/" title="Donate" class="md-nav__link">
+      Donate
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table" title="使用table布局" class="md-nav__link">
+    使用table布局
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#div" title="使用div布局" class="md-nav__link">
+    使用div布局
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="盒子模型" class="md-nav__link">
+    盒子模型
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="web40-">Web4.0 - 前端页面的布局</h1>
+<blockquote>
+<p>了解关于Web前端页面布局的历史，了解盒子模型...</p>
+<p>date: 2017-12-03</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><a href="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/data/Web4.0%20-%20%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80-%E6%A0%B7%E4%BE%8B%E9%A1%B5%E9%9D%A2%20-%20%E7%BD%97%E9%98%B3%E8%B1%AA.zip" target="_blank">点击此链接</a>，下载该篇所涉及的源代码</p>
+</blockquote>
+<p>上上次我们演示的简单的页面是没有什么布局的，他们最多只能算文章，完全不能算是页面。而页面布局，基本是页面设计最难的地方，也是HTML和CSS的真正的主要工作</p>
+<p>所以我们这次看看一个Web前端页面是怎么布局的</p>
+<p>我们上次介绍的包括标题、段落、换行、超链接等标签都是指示文档部件的标签，HTML里面多数标签都是这类的。那用什么方式来构造页面的布局呢。</p>
+<h2 id="table">使用table布局</h2>
+<p>在很久很久以前，前端页面喜欢用 <code>&lt;table&gt;</code> 标签来实现一些布局，我喜欢叫它 <strong>table布局</strong>。这一个是因为当时前端对于页面布局的多样性缺乏想象力，再一个是因为当时没有更多的适合用于页面布局的工具。</p>
+<p>那么 <code>&lt;table&gt;</code> 怎么布局呢？</p>
+<p>这十分简单，你只需要在页面上画表格，然后把内容填进去，不管是图片还是文字还是又一个表格或是别的什么。这种方式在最初非常有效，前端开发人员用这种方法实现了很多拥有复杂布局的页面（其实一点也不复杂），它们中的一部分至今仍然存在。</p>
+<p><img alt="西电物理实验教学中心" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/xidian_shiyan1.png" /></p>
+<p><img alt="西电物理实验教学中心" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/xidian_shiyan2.png" /></p>
+<p><img alt="西电物理实验教学中心" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/xidian_shiyan3.png" /></p>
+<p><code>&lt;table&gt;</code> 非常有效，但是它已经被历史淘汰了。所以我们更关注table布局的不足和局限性</p>
+<p>table布局的主要问题在于复杂的布局需要使用大量的代码（其实并不大量），而且用语义的标签来充当布局的工具本身就是不太合适的一件事。table布局的页面一般都很不灵活，而且基本都是方方正正的样子（上个世代的页面风格），用 <code>&lt;table&gt;</code> 实现响应式布局几乎没法想象。</p>
+<h2 id="div">使用div布局</h2>
+<p>作为补充，HTML需要一些专门用于布局的标签，比如最常用的就是 <code>&lt;div&gt;</code> ， <code>&lt;div&gt;</code> 没有什么语义，他不表示什么文档部件或者某类元素，你可以将他理解为就是一个框，这个框可以装任何东西，你可以为这个框赋予一些样式使它有存在的必要。</p>
+<p>HTML5还另外补充了一些表现跟 <code>&lt;div&gt;</code> 完全一样，但是具有一定语义的标签，比如 <code>&lt;header&gt;</code> 、 <code>&lt;section&gt;</code> 、 <code>&lt;footer&gt;</code> 等，为了写出更具可读性的代码，适当使用它们代替一部分 <code>&lt;div&gt;</code> 也是不错的</p>
+<h2 id="_1">盒子模型</h2>
+<p>CSS的盒子模型为HTML页面赋予了丰富而灵活的布局，他一般用于div等块级元素（并不是不能用于行内元素，而是对行内元素应用下面的几个样式会有奇怪的现象）。</p>
+<ul>
+<li>margin 外边距</li>
+<li>padding 内边距</li>
+<li>border 边框</li>
+</ul>
+<p><img alt="盒子模型" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web4/box_model.png" /></p>
+<p>让盒子一层层嵌套，盒子在其父级元素中往左上角堆叠，并通过设置一定的内外边距控制盒子在父级元素中的位置以及盒子中元素的位置，由此可以实现各种灵活而优雅的布局。这样的布局也会被叫做 <strong>盒子布局</strong> 。</p>
+<p>阅读一个简单示例页面的源码（源码在文章开头所给链接中下载），可以大致了解这种布局的一般方式。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2018-01-19-SSSTA-Web-list2017/" title="Web 2017下半年活动内容清单" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Web 2017下半年活动内容清单
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../2017-12-03-SSSTA-Web3/" title="Web3 - Python复习" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Web3 - Python复习
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; <a href="https://blog.keybrl.ink/">keybrl.ink</a> All Rights Reserved.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+            <script src="../../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-119555935-1","blog.keybrl.ink"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
