@@ -9,7 +9,7 @@ site_author: 'KeybrL'
 copyright: 'Copyright &copy; <a href="https://blog.keybrl.ink/">keybrl.ink</a> All Rights Reserved.'
 google_analytics: ['UA-119555935-1', 'blog.keybrl.ink']
 remote_branch: gh-pages
-#remote_name: origin
+remote_name: gh_deploy
 
 # Documentation layout
 pages:
@@ -39,6 +39,7 @@ pages:
         - 'Python入门1': 'sssta/2017-09-29-SSSTA-Python1.md'
     - Boring:
         - '<b>无聊的内容 - 导读</b>': 'boring/index.md'
+        - '记一次险些犯罪': 'boring/2018-05-31-crime.md'
         - '虹吸壶冲泡咖啡': 'boring/2018-03-03-siphon.md'
         - 'IKBC Poker2 加灯历程': 'boring/2018-01-20-lighted-poker2.md'
     - Projects:
