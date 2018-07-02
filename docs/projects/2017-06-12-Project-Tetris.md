@@ -96,7 +96,3 @@
 ## 更多的了解
 
 想对Tetris®有更多的了解，可以访问[官方网站](https://tetris.com/)，或查看文档`Tetris.md`。
-
-### 关于作者
-
-详情见[Keyboard的个人博客](https://keyboard-l.github.io/myBlog/)
