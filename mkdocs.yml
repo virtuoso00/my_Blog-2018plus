@@ -47,6 +47,7 @@ pages:
         - '概率神教 - 优秀的问题解决方案': 'projects/2017-11-19-Project-Coin.md'
         - 'Tetris': 'projects/2017-06-12-Project-Tetris.md'
         - '生命游戏': 'projects/2017-04-30-Project-Game_or_Life.md'
+    - 友情链接: 'link.md'
     - 小额赞助: 'donate.md'
 
 # Build directories
@@ -74,5 +75,5 @@ extra:
 dev_addr: 0.0.0.0:80
 
 # Formatting options
-markdown_extensions: ['admonition', 'markdown_newtab']
+markdown_extensions: ['admonition', 'markdown_newtab', 'footnotes']
 #plugins: ['search']

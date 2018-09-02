@@ -145,7 +145,7 @@ mkdocs serve
 
     不同的 MkDocs 主题对文档结构的呈现能力不同，但他们一般都不能呈现超过两层的文件目录
 
-MkDocs 对 Markdown 的转换是通过 [Python-Markdown](https://github.com/Python-Markdown/markdown) （一个 Python 的第三方库）实现的，所以除了支持标准的 Markdown 语法 （见[Daring Fireball: Markdown Syntax Documentation](https://daringfireball.net/projects/markdown/syntax)），也支持 Python-Markdown 支持的多数 Markdown 扩展 （详见其官方文档，或另一篇更详尽的文章[《Python-Markdown支持的Markdown扩展》](2018-05-24-python-markdown.md)）
+MkDocs 对 Markdown 的转换是通过 [Python-Markdown](https://github.com/Python-Markdown/markdown) （一个 Python 的第三方库）实现的，所以除了支持标准的 Markdown 语法 （见[Daring Fireball: Markdown Syntax Documentation](https://daringfireball.net/projects/markdown/syntax)），也支持 Python-Markdown 支持的多数 Markdown 扩展 （详见其[官方文档](https://python-markdown.github.io/extensions/)，或另一篇更详尽的文章[《Python-Markdown支持的Markdown扩展》](2018-05-24-python-markdown.md)）
 
 ## 4. 颜值即正义
 
