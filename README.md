@@ -9,10 +9,10 @@
 ## 主要内容
 
 该博客包含了 Keyboard 学习中的心得体会、知识的归纳总结、优秀读物的摘录还有 SS::STA 活动的教案。文章内容主要和 Web 相关  
-详见 **[Posts](https://blog.keybrl.com/posts/index)** 和 **[Review of SS::STA](https://blog.keybrl.com/sssta/index)**
+详见 **[文章](https://blog.keybrl.com/posts/)** 和 **[SS::STA回顾](https://blog.keybrl.com/sssta/)**
 
 学习就永远少不了练习， Keyboard 为此写了很多垃圾代码，并且收录了部分在该博客中  
-详见 **[Projects](https://blog.keybrl.com/projects/index)**
+详见 **[垃圾代码](https://blog.keybrl.com/projects/)**
 
 ## 关于作者
 
@@ -24,12 +24,12 @@ Keyboard 非常垃圾，写的文也垃圾，写的代码也垃圾。（同意�
 这些联系方式如下：
 
 - GitHub: [keybrl](https://github.com/keybrl)
-- Email: [keyboard-l@outlook.com](mailto: keyboard-l@outlook.com)
-- Steam: [keyboard_l](http://steamcommunity.com/id/keyboard_l)
+- Email: [keyboard-l@outlook.com](mailto:keyboard-l@outlook.com)
+- Steam: [keyboard_l](http://steamcommunity.com/id/keybrl)
 
 ## 版权信息
 
-**除文章中特别说明外，[本站](https://blog.keybrl.ink)所有文章版权由我本人所有**
+**除文章中特别说明外，[本站](https://blog.keybrl.com/)所有文章版权由我本人所有**
 
 但我将给予你随意转载、引用之特权，并在你喜欢署名或注明出处时署名或注明出处  
 如果有稿费，请通过[Donate页面](https://blog.keybrl.com/donate)提供的方法支付给我
