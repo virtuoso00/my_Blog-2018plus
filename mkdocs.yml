@@ -7,7 +7,7 @@ edit_uri: ''
 site_description: 'This site is the Blog of KeybrL.'
 site_author: 'KeybrL'
 copyright: 'Copyright &copy; <a href="https://blog.keybrl.com/">KeybrL</a> All Rights Reserved.'
-google_analytics: ['UA-119555935-1', 'blog.keybrl.ink']
+google_analytics: ['UA-119555935-1', 'blog.keybrl.com']
 remote_branch: gh-pages
 remote_name: origin
 
