@@ -1,6 +1,6 @@
 # 友情链接
 
-- [Review·何以解忧，唯有暴富](https://blog.yichyaqc.cn/)（尹大人的博客）
+- [Review·何以解忧，唯有暴富](https://www.yichya.review/)（尹大人的博客）
 - [Stay Hungry, Stay Foolish.](http://tobiaslee.top/)（李主席的博客）
 - [37A's Personal Site](http://www.three7.cc/)（钟大佬的博客）
 - [心渡的小黑屋](http://blog.xindu233.com/)（杨大佬的博客）
