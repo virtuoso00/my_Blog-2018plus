@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -956,35 +960,41 @@
 <p>然后安装Python的包管理器pip，当然，其他包管理器原则上也可以，但是我还是推荐使用pip。通过<code>pip --version</code>查看是否安装及版本。具体安装或更新操作见<a href="https://pip.pypa.io/en/latest/installing/" target="_blank">PyPI-get pip</a></p>
 <h3 id="uwsgi">安装uWSGI</h3>
 <p>首先你可能需要安装一些乱七八糟的依赖</p>
-<pre><code>yum groupinstall &quot;Development Tools&quot;
+<div class="codehilite"><pre><span></span>yum groupinstall &quot;Development Tools&quot;
 yum install zlib zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
-</code></pre>
+</pre></div>
+
 
 <p>for Python/WSGI support</p>
-<pre><code>yum install python-devel
-</code></pre>
+<div class="codehilite"><pre><span></span>yum install python-devel
+</pre></div>
+
 
 <p>然后安装uWSGI</p>
-<pre><code>pip install uwsgi
-</code></pre>
+<div class="codehilite"><pre><span></span>pip install uwsgi
+</pre></div>
+
 
 <p>通过<code>uwsgi --version</code>检验是否安装成功。</p>
 <p>*Ubuntu下是</p>
-<pre><code>apt-get install python-dev
+<div class="codehilite"><pre><span></span>apt-get install python-dev
 apt-get install python3-dev
 pip install uwsgi
-</code></pre>
+</pre></div>
+
 
 <h3 id="nginx">安装Nginx</h3>
 <p>据说Nginx不在yum安装源软件里，所以添加上</p>
-<pre><code>rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+<div class="codehilite"><pre><span></span>rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
 yum install nginx
-</code></pre>
+</pre></div>
+
 
 <p>然后通过<code>nginx -v</code>检验是否安装成功。</p>
 <p>*Ubuntu直接使用apt即可</p>
-<pre><code>apt-get install nginx
-</code></pre>
+<div class="codehilite"><pre><span></span>apt-get install nginx
+</pre></div>
+
 
 <h2 id="flask">Flask项目</h2>
 <blockquote>
@@ -992,20 +1002,20 @@ yum install nginx
 </blockquote>
 <p>首先我们需要建立一个Flask项目，并为其指定一个项目文件夹，这很简单</p>
 <p><strong>/root/myProject/Hello/manage.py</strong></p>
-<pre><code class="python">#!/usr/bin/python2
-# -*- coding: utf-8 -*-
-from flask import Flask
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python2</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
 
-app = Flask(__name__)
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
-@app.route('\')
-def hello():
-    return 'Hello World!'
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>
 
-if __name__ == &quot;__main__&quot;:
-    app.run()
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
 
-</code></pre>
 
 <p>该项目文件夹为/root/myProject/Hello/，你可以将项目放置在任何你喜欢的地方，但是下文都将按照该地址进行说明。</p>
 <h2 id="uwsgi_1">配置uWSGI</h2>
@@ -1015,26 +1025,27 @@ if __name__ == &quot;__main__&quot;:
 </blockquote>
 <p>经过前面的操作，你已经安装了uWSGI，下面我们为uWSGI创建一个配置文件以避免输入一堆的参数</p>
 <p><strong>/root/myProject/Hello/uwsgiconfig.ini</strong></p>
-<pre><code>[uwsgi]
+<div class="codehilite"><pre><span></span><span class="k">[uwsgi]</span>
 
-socket = 127.0.0.1:8001
-//启动程序时所监听的地址和端口，通常在本地运行flask项目，
-//地址和端口是127.0.0.1:5000,
-//不过在服务器上是通过uwsgi设置端口，通过uwsgi来启动项目，
-//也就是说启动了uwsgi，也就启动了项目。
+<span class="na">socket</span> <span class="o">=</span> <span class="s">127.0.0.1:8001</span>
+<span class="na">//启动程序时所监听的地址和端口，通常在本地运行flask项目，</span>
+<span class="na">//地址和端口是127.0.0.1:5000,</span>
+<span class="na">//不过在服务器上是通过uwsgi设置端口，通过uwsgi来启动项目，</span>
+<span class="na">//也就是说启动了uwsgi，也就启动了项目。</span>
 
-chdir = /root/myProject/Hello
-//项目目录
+<span class="na">chdir</span> <span class="o">=</span> <span class="s">/root/myProject/Hello</span>
+<span class="na">//项目目录</span>
 
-wsgi-file = manage.py
-//flask程序的启动文件，通常在本地是通过运行python manage.py runserver 来启动项目的
+<span class="na">wsgi-file</span> <span class="o">=</span> <span class="s">manage.py</span>
+<span class="na">//flask程序的启动文件，通常在本地是通过运行python manage.py runserver 来启动项目的</span>
 
-callable = app
-//程序内启用的application变量名
+<span class="na">callable</span> <span class="o">=</span> <span class="s">app</span>
+<span class="na">//程序内启用的application变量名</span>
 
-stats = 127.0.0.1:9191
-//获取uwsgi统计信息的服务地址
-</code></pre>
+<span class="na">stats</span> <span class="o">=</span> <span class="s">127.0.0.1:9191</span>
+<span class="na">//获取uwsgi统计信息的服务地址</span>
+</pre></div>
+
 
 <p><em>以上代码中的所有注释都需删去</em></p>
 <p>配置文件可以放在任何位置，我放置在项目文件夹内是为了方便使用。配置文件写好后就可以通过<code>uwsgi uwsgiconfig.ini</code>启动uWSGI及Flask项目</p>
@@ -1055,43 +1066,44 @@ stats = 127.0.0.1:9191
 <li>查看版本：<code>nginx -v</code></li>
 </ul>
 <p>Nginx主要依靠配置文件配置。我们打开Nginx的默认配置文件，一般是/etc/nginx/nginx.conf。具体文件位置可以通过<code>nginx -t</code>命令查看。默认配置文件大部分是加注释的，我们修改一部分。</p>
-<pre><code class="conf">http{
-    server {
-        listen       80;
-        # 默认的web访问端口
-        server_name  0.0.0.0;
-        # 你的公网ip
+<div class="codehilite"><pre><span></span><span class="nt">http</span><span class="p">{</span>
+    <span class="err">server</span> <span class="err">{</span>
+        <span class="err">listen</span>       <span class="err">80</span><span class="p">;</span>
+        <span class="err">#</span> <span class="err">默认的web访问端口</span>
+        <span class="err">server_name</span>  <span class="err">0.0.0.0</span><span class="p">;</span>
+        <span class="err">#</span> <span class="err">你的公网ip</span>
 
-        access_log  /root/myProject/Hello/logs/access.log;
-        # 服务器接收的请求日志
-        # 需要在项目文件夹下创建
-        # logs文件夹，下同。
-        error_log  /root/myProject/Hello/logs/error.log;
-        # 错误日志
+        <span class="err">access_log</span>  <span class="err">/root/myProject/Hello/logs/access.log</span><span class="p">;</span>
+        <span class="err">#</span> <span class="err">服务器接收的请求日志</span>
+        <span class="err">#</span> <span class="err">需要在项目文件夹下创建</span>
+        <span class="err">#</span> <span class="err">logs文件夹，下同。</span>
+        <span class="err">error_log</span>  <span class="err">/root/myProject/Hello/logs/error.log</span><span class="p">;</span>
+        <span class="err">#</span> <span class="err">错误日志</span>
 
-        location / {
+        <span class="err">location</span> <span class="err">/</span> <span class="err">{</span>
 
-            include        uwsgi_params;
-            # 这里是导入的uwsgi配置
+            <span class="err">include</span>        <span class="err">uwsgi_params</span><span class="p">;</span>
+            <span class="err">#</span> <span class="err">这里是导入的uwsgi配置</span>
 
-            uwsgi_pass     127.0.0.1:8001;
-            # 需要和uwsgi的配置文件里socket项的地址
-            # 相同,否则无法让uwsgi接收到请求。
+            <span class="err">uwsgi_pass</span>     <span class="err">127.0.0.1:8001</span><span class="p">;</span>
+            <span class="err">#</span> <span class="err">需要和uwsgi的配置文件里socket项的地址</span>
+            <span class="err">#</span> <span class="err">相同,否则无法让uwsgi接收到请求。</span>
 
-            uwsgi_param UWSGI_PYHOME /root/myProject/Hello;
-            # python的位置(如果有虚拟环境则是虚拟环境下)
+            <span class="err">uwsgi_param</span> <span class="err">UWSGI_PYHOME</span> <span class="err">/root/myProject/Hello</span><span class="p">;</span>
+            <span class="err">#</span> <span class="err">python的位置(如果有虚拟环境则是虚拟环境下)</span>
 
-            uwsgi_param UWSGI_CHDIR  /root/myProject/Hello;
-            # 项目根目录
+            <span class="err">uwsgi_param</span> <span class="err">UWSGI_CHDIR</span>  <span class="err">/root/myProject/Hello</span><span class="p">;</span>
+            <span class="err">#</span> <span class="err">项目根目录</span>
 
-            uwsgi_param UWSGI_SCRIPT manage:app;     
-            # 启动项目的主程序(在本地上运行
-            # 这个主程序可以在flask内置的
-            # 服务器上访问你的项目)
-        }
-    }
-}
-</code></pre>
+            <span class="err">uwsgi_param</span> <span class="err">UWSGI_SCRIPT</span> <span class="n">manage</span><span class="p">:</span><span class="n">app</span><span class="p">;</span>     
+            <span class="err">#</span> <span class="err">启动项目的主程序(在本地上运行</span>
+            <span class="err">#</span> <span class="err">这个主程序可以在flask内置的</span>
+            <span class="err">#</span> <span class="err">服务器上访问你的项目)</span>
+        <span class="p">}</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>
+
 
 <blockquote>
 <p>其实你只需要在/etc/nginx/conf.d中新建一个配置文件将增加的部分填入即可，并不一定要修改默认配置文件。</p>
@@ -1108,21 +1120,51 @@ stats = 127.0.0.1:9191
 <h3 id="uwsgi_2">关闭uWSGI</h3>
 <p>uWSGI似乎并没有什么命令关闭，如果你不慎使其在后台运行而无法通过<code>Ctrl+C</code>来终止的话，那么你需要进行下面的操作。</p>
 <p>查看uWSGI的PID</p>
-<pre><code>ps -e
-</code></pre>
+<div class="codehilite"><pre><span></span>ps -e
+</pre></div>
+
 
 <p>根据PID杀掉相应进程</p>
-<pre><code>kill -9 PID
-</code></pre>
+<div class="codehilite"><pre><span></span>kill -9 PID
+</pre></div>
                 
                   
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1182,6 +1224,15 @@ stats = 127.0.0.1:9191
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>

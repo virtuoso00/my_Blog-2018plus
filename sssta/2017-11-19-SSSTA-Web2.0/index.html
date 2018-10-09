@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -938,17 +942,18 @@
 </ul>
 </blockquote>
 <p>准备好文本编辑器之后，我们看看，最简单的一段HTML5代码应该长成这样</p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh_CN&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;Ubtitled&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh_CN&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ubtitled<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
     Hello World!
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <blockquote>
 <p>我将它写在了 <code>try1.html</code> 中</p>
@@ -979,36 +984,37 @@
 <li><code>&lt;meta charset="utf-8"&gt;</code> 指示代码文字编码为 <code>UTF-8</code> ，这将保证页面中中文的正常显示。</li>
 </ul>
 <p>我们暂时不打算对上述标签再做更多的讲解，我们现在关注一下 <code>&lt;body&gt;...&lt;/body&gt;</code> 中的内容，单纯写文字肯定很无趣。但我们可以给文字加很多附加含义。看下面这段稍复杂的代码 <code>try2.html</code></p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;The Zen of Python&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;The Zen of &lt;a title=&quot;Python - Official Site&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;, by Tim Peters&lt;/h1&gt;
-    &lt;p&gt;Beautiful is better than ugly.&lt;/p&gt;
-    &lt;p&gt;Explicit is better than implicit.&lt;/p&gt;
-    &lt;p&gt;Simple is better than complex.&lt;/p&gt;
-    &lt;p&gt;Complex is better than complicated.&lt;/p&gt;
-    &lt;p&gt;Flat is better than nested.&lt;/p&gt;
-    &lt;p&gt;Sparse is better than dense.&lt;/p&gt;
-    &lt;p&gt;Readability counts.&lt;/p&gt;
-    &lt;p&gt;Special cases aren't special enough to break the rules.&lt;/p&gt;
-    &lt;p&gt;Although practicality beats purity.&lt;/p&gt;
-    &lt;p&gt;Errors should never pass silently.&lt;/p&gt;
-    &lt;p&gt;Unless explicitly silenced.&lt;/p&gt;
-    &lt;p&gt;In the face of ambiguity, refuse the temptation to guess.&lt;/p&gt;
-    &lt;p&gt;There should be one-- and preferably only one --obvious way to do it.&lt;/p&gt;
-    &lt;p&gt;Although that way may not be obvious at first unless you're Dutch.&lt;/p&gt;
-    &lt;p&gt;Now is better than never.&lt;/p&gt;
-    &lt;p&gt;Although never is often better than &lt;em&gt;right&lt;/em&gt; now.&lt;/p&gt;
-    &lt;p&gt;If the implementation is hard to explain, it's a bad idea.&lt;/p&gt;
-    &lt;p&gt;If the implementation is easy to explain, it may be a good idea.&lt;/p&gt;
-    &lt;p&gt;Namespaces are one honking great idea -- let's do more of those!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>The Zen of Python<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>The Zen of <span class="p">&lt;</span><span class="nt">a</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Python - Official Site&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.python.org/&quot;</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>, by Tim Peters<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Beautiful is better than ugly.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Explicit is better than implicit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Simple is better than complex.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Complex is better than complicated.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Flat is better than nested.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sparse is better than dense.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Readability counts.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Special cases aren&#39;t special enough to break the rules.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Although practicality beats purity.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Errors should never pass silently.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Unless explicitly silenced.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>In the face of ambiguity, refuse the temptation to guess.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>There should be one-- and preferably only one --obvious way to do it.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Although that way may not be obvious at first unless you&#39;re Dutch.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Now is better than never.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Although never is often better than <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>right<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> now.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>If the implementation is hard to explain, it&#39;s a bad idea.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>If the implementation is easy to explain, it may be a good idea.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Namespaces are one honking great idea -- let&#39;s do more of those!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <p><img alt="try2.html Preview" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web2/try2_preview.png" /></p>
 <blockquote>
@@ -1046,8 +1052,9 @@
 <p>更深入的理解可以自行Google，先接着讲解一下HTML的救星 -- CSS</p>
 <h2 id="css">CSS</h2>
 <p>CSS是如何产生的呢，以及对Web应用有什么意义？在CSS之前，HTML并不是完全乏味的，他有一个很神奇的标签 <code>&lt;font&gt;</code> ，他给HTML带来了丰富多彩的样式（文字的字体和颜色），比如这样</p>
-<pre><code class="html">&lt;font size=&quot;8&quot; color=&quot;grey&quot; face=&quot;consolas&quot;&gt;Hello World!&lt;/font&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">font</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">color</span><span class="o">=</span><span class="s">&quot;grey&quot;</span> <span class="na">face</span><span class="o">=</span><span class="s">&quot;consolas&quot;</span><span class="p">&gt;</span>Hello World!<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <p><img alt="font_preview" src="//keybrl-my-blog.oss-cn-shenzhen.aliyuncs.com/2018/images/SSSTA-Web2/font_preview.png" /></p>
 <blockquote>
@@ -1060,8 +1067,9 @@
 <p>而且 <code>&lt;font&gt;</code> 标签一般都是修饰行内元素的，他对块级元素无能为力。而且 <code>&lt;font&gt;</code> 标签不带有语义，尽管你把某些字设置为某种颜色或者某种字体、大小，但是你不能从代码中看出为什么要这么做。最重要的是，HTML设计的理念是用标签表示语义和结构，而不应该用他们表示样式。由此带来的混乱将会极大地限制Web前端的发展。所以，CSS是作为HTML的救星而出现的</p>
 <hr />
 <p>那我们看看CSS到底长什么样吧。</p>
-<pre><code class="html">&lt;p style=&quot;font-family: Consolas; font-size: 40px; color: grey;&quot;&gt;Hello World&lt;/p&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;font-family: Consolas; font-size: 40px; color: grey;&quot;</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <blockquote>
 <p>以上写法效果和上面的 <code>&lt;font&gt;</code> 写的效果类似，可以自行尝试</p>
@@ -1069,55 +1077,56 @@
 <p>CSS可以写在绝大多数元素标签中，作为 <code>style</code> 属性的值。这样一看，貌似CSS也没有比 <code>&lt;font&gt;</code> 高到哪里去呀，不就是和一般标签结合了嘛，还是那么复杂（甚至字数还多了）。其实即使是这样CSS也有很明显的优势，他可以修饰块级元素，他可以控制元素位置、大小、背景、边框、边距、...反正他能控制的比 <code>&lt;font&gt;</code> 多得多；他和一般标签结合，这意味着他并不会破坏文档的结构，我们并不需要为了某些效果，增加一堆没有语义的标签。最重要的是，CSS还有另外两种更有用的存在形式。</p>
 <p>上面的例子中，CSS写在 <code>style</code> 属性中，这种方式叫做 <strong>内联的样式表</strong> ，CSS还有另外两种更常用的形式</p>
 <h3 id="_3">内部的样式表</h3>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;The Zen of Python&lt;/title&gt;
-    &lt;style&gt;
-      body {
-        background-color: #0f0f0f;
-        font-family: &quot;Monotype Corsiva&quot;;
-      }
-      a, em, b {
-        color: #ffffff;
-        font-weight: bolder;
-      }
-      h1 {
-        color: #ffffff;
-        font-size: 50px;
-      }
-      p {
-        margin: 5px 0;
-        color: #c8c8c8;
-        font-size: 30px;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;The Zen of &lt;a title=&quot;Python - Official Site&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;, by Tim Peters&lt;/h1&gt;
-    &lt;p&gt;Beautiful is better than ugly.&lt;/p&gt;
-    &lt;p&gt;Explicit is better than implicit.&lt;/p&gt;
-    &lt;p&gt;Simple is better than complex.&lt;/p&gt;
-    &lt;p&gt;Complex is better than complicated.&lt;/p&gt;
-    &lt;p&gt;Flat is better than nested.&lt;/p&gt;
-    &lt;p&gt;Sparse is better than dense.&lt;/p&gt;
-    &lt;p&gt;Readability counts.&lt;/p&gt;
-    &lt;p&gt;Special cases aren't special enough to break the rules.&lt;/p&gt;
-    &lt;p&gt;Although practicality beats purity.&lt;/p&gt;
-    &lt;p&gt;Errors should never pass silently.&lt;/p&gt;
-    &lt;p&gt;Unless explicitly silenced.&lt;/p&gt;
-    &lt;p&gt;In the face of ambiguity, refuse the temptation to guess.&lt;/p&gt;
-    &lt;p&gt;There should be one-- and preferably only one --obvious way to do it.&lt;/p&gt;
-    &lt;p&gt;Although that way may not be obvious at first unless you're Dutch.&lt;/p&gt;
-    &lt;p&gt;Now is better than never.&lt;/p&gt;
-    &lt;p&gt;Although never is often better than &lt;em&gt;right&lt;/em&gt; now.&lt;/p&gt;
-    &lt;p&gt;If the implementation is hard to explain, it's a bad idea.&lt;/p&gt;
-    &lt;p&gt;If the implementation is easy to explain, it may be a good idea.&lt;/p&gt;
-    &lt;p&gt;Namespaces are one honking great idea -- let's do more of those!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>The Zen of Python<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+      <span class="nt">body</span> <span class="p">{</span>
+        <span class="k">background-color</span><span class="p">:</span> <span class="mh">#0f0f0f</span><span class="p">;</span>
+        <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Monotype Corsiva&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">a</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">b</span> <span class="p">{</span>
+        <span class="k">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+        <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bolder</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">h1</span> <span class="p">{</span>
+        <span class="k">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+        <span class="k">font-size</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">p</span> <span class="p">{</span>
+        <span class="k">margin</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">color</span><span class="p">:</span> <span class="mh">#c8c8c8</span><span class="p">;</span>
+        <span class="k">font-size</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>The Zen of <span class="p">&lt;</span><span class="nt">a</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Python - Official Site&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.python.org/&quot;</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>, by Tim Peters<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Beautiful is better than ugly.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Explicit is better than implicit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Simple is better than complex.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Complex is better than complicated.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Flat is better than nested.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sparse is better than dense.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Readability counts.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Special cases aren&#39;t special enough to break the rules.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Although practicality beats purity.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Errors should never pass silently.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Unless explicitly silenced.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>In the face of ambiguity, refuse the temptation to guess.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>There should be one-- and preferably only one --obvious way to do it.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Although that way may not be obvious at first unless you&#39;re Dutch.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Now is better than never.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Although never is often better than <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>right<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> now.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>If the implementation is hard to explain, it&#39;s a bad idea.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>If the implementation is easy to explain, it may be a good idea.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Namespaces are one honking great idea -- let&#39;s do more of those!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <blockquote>
 <p>这段代码写在 <code>try3.html</code> 中</p>
@@ -1127,28 +1136,30 @@
 <h3 id="_4">外部的样式表</h3>
 <p>到这里CSS已经很完美了，但是并不够。我们经常看到，有些网站有很多页面，每个页面虽然内容不同，但都有非常相似的风格。难道我们需要在每个页面中都写上很大一段一模一样的CSS代码吗。并不用，我们可以把CSS写在一个单独的文件中，然后仅通过一条语句即可引入到HTML页面中。</p>
 <p>首先写一个 <code>.css</code> 文件，比如我用的是 <code>main.css</code></p>
-<pre><code class="css">body {
-  background-color: #0f0f0f;
-  font-family: &quot;Monotype Corsiva&quot;;
-}
-a, em, b {
-  color: #ffffff;
-  font-weight: bolder;
-}
-h1 {
-  color: #ffffff;
-  font-size: 50px;
-}
-p {
-  margin: 5px 0;
-  color: #c8c8c8;
-  font-size: 30px;
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#0f0f0f</span><span class="p">;</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Monotype Corsiva&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">b</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bolder</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#c8c8c8</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>将这个文件保存在 <code>try3.html</code> 的同一个目录中，然后我们可以把 <code>try3.html</code> 中那一大段 <code>&lt;style&gt;...&lt;/style&gt;</code> 换成这样一句话</p>
-<pre><code class="html">&lt;link href=&quot;./main.css&quot; rel=&quot;stylesheet&quot;&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./main.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <blockquote>
 <p><code>&lt;link&gt;</code> 标签用于为页面引入一些静态文件，比如图标、样式表； <code>href</code> 属性指示静态文件所在的位置，这是一个URL，可以使用绝对目录，也可以使用相对目录； <code>rel</code> 属性指示引入文件的类型是样式表</p>
@@ -1187,10 +1198,39 @@ p {
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1250,6 +1290,15 @@ p {
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>

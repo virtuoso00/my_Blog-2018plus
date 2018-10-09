@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -1111,9 +1115,10 @@
 <li>input()</li>
 </ul>
 <p>于是你终于可以写你喜欢的“Hello World”及其变体了</p>
-<pre><code class="python">name = input('Your name:')
-print('Hello %s!' % name)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Your name:&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello </span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+
 
 <blockquote>
 <p>Python2.7中<code>print</code>更像操作符，他可以不需要括号。而功能与<code>input()</code>类似的则是<code>raw_input()</code></p>
@@ -1123,19 +1128,20 @@ print('Hello %s!' % name)
 <li>help()</li>
 </ul>
 <p>你可以通过他获取内建函数、基本数据类型和自定义类和函数的部分说明</p>
-<pre><code class="python">a = 1
-help(a)
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">help</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
-# 等价于下面这个
-help(int)
+<span class="c1"># 等价于下面这个</span>
+<span class="n">help</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
-# 可以help的东西很多
-help(abs)
-help(hhh)  # 这是什么鬼
-help(help)
-help(str)
-help(list.append)
-</code></pre>
+<span class="c1"># 可以help的东西很多</span>
+<span class="n">help</span><span class="p">(</span><span class="nb">abs</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">hhh</span><span class="p">)</span>  <span class="c1"># 这是什么鬼</span>
+<span class="n">help</span><span class="p">(</span><span class="n">help</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+</pre></div>
+
 
 <blockquote>
 <p>总之你什么都可以试着help()一下</p>
@@ -1150,13 +1156,14 @@ help(list.append)
 <h3 id="_7">关于代码注释</h3>
 <p>养成良好的代码习惯十分重要，而代码注释是为数不多的在代码风格之战中被较好地达成一致的部分。</p>
 <p>而且特别幸运的是，在Python中，只有一种用于标记注释的符号，即<code>#</code></p>
-<pre><code class="python"># 这是一个无聊的注释，他可以独立成行
-print('Hello World!')  # 他也可以跟在语句后面
-# 多行注释的每一行
-# 都必须要有一个井号
-# 就像这样
-# 其实你也可以理解为，Python没有多行注释
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1"># 这是一个无聊的注释，他可以独立成行</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>  <span class="c1"># 他也可以跟在语句后面</span>
+<span class="c1"># 多行注释的每一行</span>
+<span class="c1"># 都必须要有一个井号</span>
+<span class="c1"># 就像这样</span>
+<span class="c1"># 其实你也可以理解为，Python没有多行注释</span>
+</pre></div>
+
 
 <blockquote>
 <p>一般我们建议：</p>
@@ -1169,32 +1176,35 @@ print('Hello World!')  # 他也可以跟在语句后面
 <h3 id="_8">初谈变量与常量</h3>
 <p>与绝大多数编程语言类似，Python的变量标识符<code>只能由下划线或拉丁字母开头，只能包含下划线、拉丁字母和阿拉伯数字</code>，并且类似的，Python也有一些保留字</p>
 <p>Python有一个官方库<code>keyword</code>，里面有一个保留字列表<code>kwlist</code>和一个判断是否为保留字的方法<code>iskeyword</code></p>
-<pre><code class="python">import keyword
-print(keyword.kwlist)  # 打印保留字列表
-print(keyword.iskeyword('True'))  # 判断'True'是否为保留字
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">keyword</span>
+<span class="k">print</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>  <span class="c1"># 打印保留字列表</span>
+<span class="k">print</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">iskeyword</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">))</span>  <span class="c1"># 判断&#39;True&#39;是否为保留字</span>
+</pre></div>
+
 
 <h4 id="_9">灵活的变量</h4>
 <p>在Python中变量是一个十分灵活的存在</p>
 <p>首先他不需要显式地声明，也不需要显式地指明他的类型。他们可以简单地通过赋值运算符<code>=</code>进行创建、声明以及赋值,就像这样</p>
-<pre><code class="python">a = 233  # 整数
-b = 1.33  # 浮点数
-c = '233'  # 字符串
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">233</span>  <span class="c1"># 整数</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">1.33</span>  <span class="c1"># 浮点数</span>
+<span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;233&#39;</span>  <span class="c1"># 字符串</span>
+</pre></div>
+
 
 <p>一个变量的类型可以通过赋值操作符随意改变，但并不代表他们的类型很随意，其实Python有着严格的类型检查。我们可以用内建函数<code>type()</code>来获取一个变量的类型</p>
-<pre><code class="python">a = 233  # a是一个整数
-print(a, type(a))
-# 233 &lt;class 'int'&gt;
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">233</span>  <span class="c1"># a是一个整数</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="c1"># 233 &lt;class &#39;int&#39;&gt;</span>
 
-a = '哈哈哈'  # a变为一个字符串
-print(a, type(a))
-# 哈哈哈 &lt;class 'str'&gt;
+<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;哈哈哈&#39;</span>  <span class="c1"># a变为一个字符串</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="c1"># 哈哈哈 &lt;class &#39;str&#39;&gt;</span>
 
-a = 2.33  # a又变为一个浮点数
-print(a, type(a))
-# 2.33 &lt;class 'float'&gt;
-</code></pre>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">2.33</span>  <span class="c1"># a又变为一个浮点数</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="c1"># 2.33 &lt;class &#39;float&#39;&gt;</span>
+</pre></div>
+
 
 <p>关于Python中数据类型的介绍和关于变量的更多介绍将在后面为你展现</p>
 <blockquote>
@@ -1205,8 +1215,9 @@ print(a, type(a))
 <p>Python里没有常量，而唯一可以阻止一个变量被重新赋值的方法就是：你自己确保他没被重新赋值</p>
 </blockquote>
 <p>当然，好的代码习惯还是必要的，如果你的确需要用变量存储一些不打算改变的值，你可以使用大写字母变量名提醒自己（欺骗自己）</p>
-<pre><code class="python">PI = 3.14159265358979323846264338327950288419716939937510
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265358979323846264338327950288419716939937510</span>
+</pre></div>
+
 
 <p>相应的，变的变量尽量不要使用大写字母开头</p>
 <blockquote>
@@ -1224,73 +1235,80 @@ print(a, type(a))
 <p>int、float</p>
 </blockquote>
 <p>Python中整数没有太多的禁忌（精度和大小方面），但是浮点数可能比较奇怪</p>
-<pre><code class="python">a = 0x1234567890ABCDE
-print(a)  # 可以使用16进制表示
-b = 233323332333233323332333233323332333233323332333233323332333
-print(b)  # 整数在精度和大小方面都没有限制
-c = 2 ** 10000
-print(c)  # 运算也无近似误差
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mh">0x1234567890ABCDE</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 可以使用16进制表示</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">233323332333233323332333233323332333233323332333233323332333</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># 整数在精度和大小方面都没有限制</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">10000</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># 运算也无近似误差</span>
 
-d = 2.33333333333333333333333333333333333333333333  # 浮点数的精度会受限制
-print(d)
-e = 2.33E100
-f = 2.33E500  # 指数一般不超过308（其实一般只能用到307）
-print(e)
-print(f)
-# 运算起来也很神奇
-print(2. ** 10000)
-print(0.1 + 0.2)
-</code></pre>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">2.33333333333333333333333333333333333333333333</span>  <span class="c1"># 浮点数的精度会受限制</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mf">2.33E100</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">2.33E500</span>  <span class="c1"># 指数一般不超过308（其实一般只能用到307）</span>
+<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="c1"># 运算起来也很神奇</span>
+<span class="k">print</span><span class="p">(</span><span class="mf">2.</span> <span class="o">**</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+
 
 <p>所以如无必要，尽量使用整数</p>
-<pre><code class="python">print(2333333333333333333333333333333333333333333333333333333333333)
-print(2333333333333333333333333333333333333333333333333333333333333.)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">2333333333333333333333333333333333333333333333333333333333333</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mf">2333333333333333333333333333333333333333333333333333333333333.</span><span class="p">)</span>
+</pre></div>
+
 
 <h4 id="_13">字符串</h4>
 <p>Python中有现成的字符串类型（而且比C++的好用），你不用像C那样用字符数组、字符指针来操作字符串，你只需要</p>
-<pre><code class="python">a = 'Hello World！'
-print(a)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Hello World！&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
 
 <p>Python的字符串是一段在一对单引号或双引号之间的内容</p>
-<pre><code class="python">a = '233哈哈哈'
-b = &quot;233哈哈哈&quot;
-print(a == b)  # 结果当然是True，他们是一样的
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;233哈哈哈&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;233哈哈哈&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 结果当然是True，他们是一样的</span>
 
-print('毋庸置疑的是: &quot;在单引号标记的字符串里使用双引号是没有问题的&quot;，其实反过来也可以')
-print('但如果你既需要用双引号&quot;，又要用单引号\'，那你将需要用反斜杠转义')
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;毋庸置疑的是: &quot;在单引号标记的字符串里使用双引号是没有问题的&quot;，其实反过来也可以&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;但如果你既需要用双引号&quot;，又要用单引号</span><span class="se">\&#39;</span><span class="s1">，那你将需要用反斜杠转义&#39;</span><span class="p">)</span>
+</pre></div>
+
 
 <p>如果你需要使用多行文本，你可以使用<code>\n</code>换行，但其实Python提供了一种更漂亮的方法，即<strong>使用一对三个单引号包围多行文本</strong></p>
-<pre><code class="python">a = '这是第一行\n第二行\n还有第三行\n最后，第四行'
-b = '''这是第一行
-第二行
-还有第三行
-最后，第四行'''
-print(a)
-print(b)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;这是第一行</span><span class="se">\n</span><span class="s1">第二行</span><span class="se">\n</span><span class="s1">还有第三行</span><span class="se">\n</span><span class="s1">最后，第四行&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;这是第一行</span>
+<span class="s1">第二行</span>
+<span class="s1">还有第三行</span>
+<span class="s1">最后，第四行&#39;&#39;&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
 
 <p>转义字符相信大家都不陌生，Python也可以使用<code>\</code>进行转义，但是如果要输出<code>\</code>本身，就需要给他自己转义<code>\\</code>。某些情况下你需要非常多的<code>\</code>，在该死的re表达式中甚至需要多次转义（用四个<code>\</code>表示一个真正的<code>\</code>）。这样非常的蠢，所以Python还提供一种较优雅的方式</p>
-<pre><code class="python">print('\\\t\\\\')
-print(r'\\\t\\\\')
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\\t\\\\</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">\t</span><span class="se">\\\\</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
 
 <p>用<code>r</code>作为字符串的前缀可以使字符串内的反斜杠不转义</p>
 <p>大家应该都玩过C的格式化输出，Python也有类似功能，但这不只能用在输出上</p>
-<pre><code class="python">a = 'Hello %s!' % 'World'
-print(a)
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Hello </span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="s1">&#39;World&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
-b = '%d %5d %010d' % (233, 233, 233)
-print(b)
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> </span><span class="si">%5d</span><span class="s1"> </span><span class="si">%010d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">233</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">233</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 
-c = '%f %5.2f' % (2.33, 2.33)
-print(c)
+<span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1"> </span><span class="si">%5.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">2.33</span><span class="p">,</span> <span class="mf">2.33</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
-d = '%x' % 563
-print(d)
-</code></pre>
+<span class="n">d</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%x</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="mi">563</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+
 
 <blockquote>
 <p>他们跟C的格式很像</p>
@@ -1298,79 +1316,88 @@ print(d)
 <hr />
 <p>字符串还有很多很棒的操作，其中最好玩的就是字符串切片和”加减乘除“（其实没有‘除’和’减‘）</p>
 <p>如果你需要按照某种规律截取字符串的一部分，那在Python中多数情况下这很简单</p>
-<pre><code class="python">a = 'abcdefghijklmn'
-print(a[2:5:1])  # striing[start:end:step]
-print(a[:6])  # 当start为0，end为字符串长度，step为1时他们可省略，省略step时其前的冒号亦可省略
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmn&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># striing[start:end:step]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>  <span class="c1"># 当start为0，end为字符串长度，step为1时他们可省略，省略step时其前的冒号亦可省略</span>
 
-# 用负数做出更复杂的切片
-print(a[::-1])
-print(a[-6:-2])
-</code></pre>
+<span class="c1"># 用负数做出更复杂的切片</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
 
 <p>还有一种和切片很像的操作，像C一样用类似数组下标的方式获取某个字符（其实仍是字符串）</p>
-<pre><code class="python">a = 'abcdefghijklmn'
-print(a[5])
-print(a[-3])
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmn&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
 
 <p>‘加’、‘数乘’</p>
-<pre><code class="python">print('233' + '有趣吗')
-print('233很无聊' * 2)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;233&#39;</span> <span class="o">+</span> <span class="s1">&#39;有趣吗&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;233很无聊&#39;</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
 
 <h4 id="_14">列表和元组</h4>
 <p>你们都学习过C语言的‘数组’，嗯，Python也有很类似的东西，但是更智能，更有趣，那就是‘列表’（list）</p>
 <p>和其他变量一样，列表的创建或者说声明只需要通过’赋值‘操作。</p>
-<pre><code class="python">a = [1, 2, 3, 4]
-# 列表是由一组包裹在方括号内的数据组成的，他们不一定要有相同的类型
-b = [1, '233', True, 2.345]
-# 列表可以嵌套，类似于C的‘二维数组’
-c = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="c1"># 列表是由一组包裹在方括号内的数据组成的，他们不一定要有相同的类型</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;233&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="mf">2.345</span><span class="p">]</span>
+<span class="c1"># 列表可以嵌套，类似于C的‘二维数组’</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+
 
 <p>列表可以通过下标访问或者切片（你一定在上面见识过字符串的切片了）</p>
-<pre><code class="python">print(a[1])
-print(c[0][2])
-print(b[1:3])
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
 
 <p>你已经注意到了，Python的列表和C的数组有一个很大的区别，我们创建他时没有为他设置大小。因为Python解释器自动帮你完成了这些操作，解释器自动识别了数据大小并为之分配合适的内存空间。如果你足够有想法，你一定会想到</p>
 <p><strong>”如果他真的那么智能，那他为什么不为我动态分配内存呢，他只需要检查我要加入的或者移出的数据的大小然后为我多申请一些内存或者释放多余的内存就可以了“</strong></p>
 <p>嗯，Python就是这么做的。这意味Python的列表比C的数组有高得多的灵活性</p>
-<pre><code class="python">a.append(5)  # 在a的末尾加入5这个元素
-a += [5]  # 作用类似于上面的方法，但这种方法是合并列表，而非追加元素
-a.insert(2, 2.5)  # 将2.5插入到a的第2位，其后元素后移
-a.pop(3)  # 删除a中第3位的数据，其后元素前移
-a.update(1, 3)
-# 还有一堆操作不讲了，自己help()和Google去
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># 在a的末尾加入5这个元素</span>
+<span class="n">a</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># 作用类似于上面的方法，但这种方法是合并列表，而非追加元素</span>
+<span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>  <span class="c1"># 将2.5插入到a的第2位，其后元素后移</span>
+<span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 删除a中第3位的数据，其后元素前移</span>
+<span class="n">a</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1"># 还有一堆操作不讲了，自己help()和Google去</span>
+</pre></div>
+
 
 <blockquote>
 <p>扔开恼人的内存管理还是一件相当值得高兴的事情</p>
 </blockquote>
 <p>还是想顺便提醒一下，以后别再在Python中写冒泡排序了</p>
-<pre><code class="python">a = [2, 4, 1, 3, 5, 2, 6]
-a.sort()
-print(a)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
 
 <hr />
 <p>元组其实和列表很相似，不同的是列表是可变的，而元组是不可变的，他将在创建时被定格。元组不可变并不等同于存储了元组的变量不可变，上面说了，你没有任何办法阻止一个变量的重新赋值，除非你不这么做。</p>
 <p>元组的表示和读取操作和列表很像，只不过你需要用<code>()</code>代替<code>[]</code></p>
-<pre><code class="python">a = (1, 2, 3, 4)
-b = (1, '2', 3.0, 4, (1, 2, 3))
-c = (233,)
-print(a[1])
-print(b[3:5][1][1])  # 切片、检索都是和列表完全一样的
-print(c)  #  当元组中只有一个元素，唯一的元素后面必须写一个逗号，以消除歧义
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="mi">233</span><span class="p">,)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 切片、检索都是和列表完全一样的</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1">#  当元组中只有一个元素，唯一的元素后面必须写一个逗号，以消除歧义</span>
+</pre></div>
+
 
 <p>元组不可变，但是元组可以存储可变对象</p>
-<pre><code class="python">a = ([1, 2, 3],)
-a.append()
-a[0].append()
-print(a)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">()</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
 
 <blockquote>
 <p>关于可变和不可变对象的讨论，我们后面会讲</p>
@@ -1380,34 +1407,36 @@ print(a)
 <p>你们都见过C的数组或者是Python的列表。如果你需要用一个“名字”（一般是字符串）而不是数字下标作为索引来存储和取用数据，你会怎么做？</p>
 </blockquote>
 <p>一个简单显而易见的方法是，创建两个数组，一个存储所谓的“名字”一个存储值，两个数组中同一下标对应的数据就是所谓的对应的“名字”和值</p>
-<pre><code class="C">char keys[1000][10];
-int values[1000];
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">keys</span><span class="p">[</span><span class="mi">1000</span><span class="p">][</span><span class="mi">10</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">values</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>
+</pre></div>
+
 
 <p>字典几乎是所有高级语言的标配，但你们在C语言中可能没有接触过（因为根本没有）。</p>
 <p>在Python中字典是非常常用的类型</p>
-<pre><code class="python">a_dict = {
-    'name': '罗阳豪',
-    'email': 'keyboard-l@outlook.com',
-    'username': 'keyboard'
-}
-print(a_dict['email'])
+<div class="codehilite"><pre><span></span><span class="n">a_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;罗阳豪&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;keyboard-l@outlook.com&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;keyboard&#39;</span>
+<span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_dict</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">])</span>
 
-# 解释器会报错
-print(a_dict['hhh'])
+<span class="c1"># 解释器会报错</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_dict</span><span class="p">[</span><span class="s1">&#39;hhh&#39;</span><span class="p">])</span>
 
-# 安全做法，使用get()方法查找不确定的键
-print(a_dict.get('hhh'))
+<span class="c1"># 安全做法，使用get()方法查找不确定的键</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hhh&#39;</span><span class="p">))</span>
 
-# 随意增改
-a_dict['hhh'] = '233'
-a_dict['username'] = 'KeyboardL'
-print(a_dict['hhh'], a_dict['username'])
+<span class="c1"># 随意增改</span>
+<span class="n">a_dict</span><span class="p">[</span><span class="s1">&#39;hhh&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;233&#39;</span>
+<span class="n">a_dict</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;KeyboardL&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_dict</span><span class="p">[</span><span class="s1">&#39;hhh&#39;</span><span class="p">],</span> <span class="n">a_dict</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">])</span>
 
-# 删除也很容易
-a_dict.pop('hhh')
-print(a_dict.get('hhh'))
-</code></pre>
+<span class="c1"># 删除也很容易</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;hhh&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hhh&#39;</span><span class="p">))</span>
+</pre></div>
+
 
 <h3 id="_16">标准类型操作符</h3>
 <p><strong>比较运算</strong></p>
@@ -1537,10 +1566,39 @@ print(a_dict.get('hhh'))
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1600,6 +1658,15 @@ print(a_dict.get('hhh'))
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>

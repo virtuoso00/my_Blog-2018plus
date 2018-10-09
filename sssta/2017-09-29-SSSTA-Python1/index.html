@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -1031,82 +1035,86 @@
 </blockquote>
 <hr />
 <p>试看以下这两段代码</p>
-<pre><code class="python"># first_example.py
-str = input('Please input your string: ')
-print('Your string in reverse order:', str[::-1])
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1"># first_example.py</span>
+<span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please input your string: &#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Your string in reverse order:&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
 
-<pre><code class="c">// first_example.c
-#include &lt;stdio.h&gt;
 
-int main()
-{
-    int n = 0, i;
-    char ch, str[1000];
+<div class="codehilite"><pre><span></span><span class="c1">// first_example.c</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-    printf(&quot;Please input your string: &quot;);
-    while ((ch = getchar()) != '\n')
-        str[n++] = ch;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">ch</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>
 
-    printf(&quot;Your string in reverse order: &quot;);
-    for (i = 0;i &lt; n;i++)
-        printf(&quot;%c&quot;, str[n - i - 1]);
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Please input your string: &quot;</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">ch</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">())</span> <span class="o">!=</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+        <span class="n">str</span><span class="p">[</span><span class="n">n</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Your string in reverse order: &quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>他们的功能几乎是一样的。但是用C语言写的比用Python写的要复杂得多<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup></p>
 <blockquote>
 <p><strong>其实你们真的不用在意代码写了啥</strong></p>
 </blockquote>
 <p>以上的比较还仅仅是单纯从语法上，如果Python使用一些强大的库，那将极大地提高效率</p>
-<pre><code class="python"># try_flask.py
-from flask import Flask
-app = Flask(__name__)
+<div class="codehilite"><pre><span></span><span class="c1"># try_flask.py</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
-@app.route(&quot;/&quot;)
-def hello():
-    return &quot;Hello World!&quot;
+<span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello World!&quot;</span>
 
-if __name__ == &quot;__main__&quot;:
-    app.run()
-</code></pre>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
 
 <p>你肯定不会想到，以上这7行代码就实现了一个简单的Web服务器。当然，他引入了一个很棒的库 <code>flask</code></p>
-<pre><code class="python"># font_image.py
-from PIL import Image
+<div class="codehilite"><pre><span></span><span class="c1"># font_image.py</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 
-IMG = 'filename'
-WIDTH = 80
-HEIGHT = 80
-OUTPUT = './font_image.txt'
+<span class="n">IMG</span> <span class="o">=</span> <span class="s1">&#39;filename&#39;</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">OUTPUT</span> <span class="o">=</span> <span class="s1">&#39;./font_image.txt&#39;</span>
 
-gray_char = list(&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,\&quot;^`'. &quot;)
+<span class="n">gray_char</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,</span><span class="se">\&quot;</span><span class="s2">^`&#39;. &quot;</span><span class="p">)</span>
 
-def rgb_to_char(r, g, b, alpha = 1):
-    gray = int((0.2126 * r + 0.7152 * g + 0.0722 * b) * alpha + (1 - alpha) * 255)
-    unit = 256 / len(gray_char)
-    return gray_char[int(gray / unit)]
+<span class="k">def</span> <span class="nf">rgb_to_char</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">gray</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mf">0.2126</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span> <span class="mf">0.7152</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span> <span class="mf">0.0722</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>
+    <span class="n">unit</span> <span class="o">=</span> <span class="mi">256</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">gray_char</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">gray_char</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">gray</span> <span class="o">/</span> <span class="n">unit</span><span class="p">)]</span>
 
-if __name__ == '__main__':
-    im = Image.open(IMG)
-    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)
-    txt = &quot;&quot;
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">IMG</span><span class="p">)</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">WIDTH</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">NEAREST</span><span class="p">)</span>
+    <span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-    for i in range(HEIGHT):
-        for j in range(WIDTH):
-            txt += rgb_to_char(*im.getpixel((j, i)))
-        txt += '\n'
-    print(txt)
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">):</span>
+            <span class="n">txt</span> <span class="o">+=</span> <span class="n">rgb_to_char</span><span class="p">(</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span>
+        <span class="n">txt</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
 
-    if OUTPUT:
-        with open(OUTPUT, 'w') as f:
-            f.write(txt)
-    else:
-        with open(&quot;output.txt&quot;, 'w') as f:
-            f.write(txt)
-</code></pre>
+    <span class="k">if</span> <span class="n">OUTPUT</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+</pre></div>
+
 
 <p>以上是一个有趣的小玩意，使用了第三方库 <code>pillow</code>。</p>
 <blockquote>
@@ -1137,9 +1145,10 @@ if __name__ == '__main__':
 </ol>
 <h4 id="ubuntudebian">Ubuntu(Debian)安装</h4>
 <p>打开<strong>终端</strong>，使用apt命令安装py2或py3</p>
-<pre><code class="bash">apt-get install python
+<div class="codehilite"><pre><span></span>apt-get install python
 apt-get install python3
-</code></pre>
+</pre></div>
+
 
 <blockquote>
 <p>你可能（肯定）需要使用<code>root</code>用户权限，比如在命令前加上<code>sudo</code></p>
@@ -1152,19 +1161,22 @@ apt-get install python3
 <p>以上涉嫌违反广告法的部分已用*代替</p>
 </blockquote>
 <p>Windows使用<a href="https://pip.pypa.io/en/stable/installing/" target="_blank"><code>pip-get.py</code>脚本</a>安装</p>
-<pre><code class="bash">python get-pip.py
+<div class="codehilite"><pre><span></span>python get-pip.py
 py -3 get-pip.py
-</code></pre>
+</pre></div>
+
 
 <p>Ubuntu可以通过apt工具安装</p>
-<pre><code class="bash">apt-get install python-pip
+<div class="codehilite"><pre><span></span>apt-get install python-pip
 apt-get install python3-pip
-</code></pre>
+</pre></div>
+
 
 <p>安装完成之后可以使用pip命令安装Python第三方库，比如一个优雅的HTTP库<code>requests</code></p>
-<pre><code class="bash">pip install requests
+<div class="codehilite"><pre><span></span>pip install requests
 pip3 install requests
-</code></pre>
+</pre></div>
+
 
 <h3 id="_2">代码写在哪？</h3>
 <p>安装好Python后，我们就该开始写点代码了，我们主要有以下三种方式</p>
@@ -1203,8 +1215,9 @@ pip3 install requests
 <p>以及，多看多想！</p>
 </blockquote>
 <h3 id="-python_1">最后的最后 -- Python的哲学</h3>
-<pre><code class="python">import this
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+
 
 <blockquote>
 <p>The Zen of Python, by Tim Peters</p>
@@ -1250,10 +1263,39 @@ pip3 install requests
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1313,6 +1355,15 @@ pip3 install requests
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>

@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -1055,24 +1059,28 @@
 <p>首先查看仓库克隆地址</p>
 <p>![仓库克隆地址]({{ site.assets_url }}/images/SSSTA-Blog/clone_url.png)</p>
 <p>然后在本地克隆一份</p>
-<pre><code class="bash">cd .
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> .
 git clone http://github.com/xxx/example.git
-</code></pre>
+</pre></div>
+
 
 <p>然后进入本地仓库目录</p>
-<pre><code class="bash">cd ./example
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ./example
+</pre></div>
+
 
 <p>然后我们可以先对仓库里面的文件做些修改，比如写个README.md</p>
 <p>然后我们试着提交修改并将修改后的仓库推到GitHub上</p>
 <p>首先是将目前文件夹里的内容加到仓库中</p>
-<pre><code class="bash">git add .
-</code></pre>
+<div class="codehilite"><pre><span></span>git add .
+</pre></div>
+
 
 <p>然后提交修改</p>
-<pre><code class="bash">git commit -m 'summary
-description'
-</code></pre>
+<div class="codehilite"><pre><span></span>git commit -m <span class="s1">&#39;summary</span>
+<span class="s1">description&#39;</span>
+</pre></div>
+
 
 <blockquote>
 <p>如果此时弹出类似 <code>Please tell me who you are</code> 的字样，那你需要先写两行配置信息</p>
@@ -1081,8 +1089,9 @@ description'
 <p>两个大括号以及他们内部的内容用自己的真实信息替换</p>
 </blockquote>
 <p>当然以上都是对本地仓库的操作，我们把修改后的仓库推到GitHub</p>
-<pre><code class="bash">git push origin master
-</code></pre>
+<div class="codehilite"><pre><span></span>git push origin master
+</pre></div>
+
 
 <p>现在我们可以刷新一下GitHub看看了</p>
 <p>我们现在复习一下</p>
@@ -1133,10 +1142,11 @@ description'
 <h2 id="_3">最后的复习</h2>
 <p>我们借着推送一份文章的机会再最后复习一下Git和GitHub的操作</p>
 <p>将文章按照要求写好，放在<code>_post</code>文件夹中</p>
-<pre><code class="bash">git add .
-git commit -m 'push a new article'
+<div class="codehilite"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;push a new article&#39;</span>
 git push origin master
-</code></pre>
+</pre></div>
+
 
 <p>我们刷新一下自己刚搭好的博客，会不会有一种感动</p>
 <h2 id="_4">域名的选购与解析(选读)</h2>
@@ -1221,10 +1231,39 @@ git push origin master
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1284,6 +1323,15 @@ git push origin master
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>
