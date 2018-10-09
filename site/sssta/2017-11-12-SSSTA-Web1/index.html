@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -914,8 +918,9 @@
 </ul>
 <h2 id="url">URL</h2>
 <p>看一个真实的URL</p>
-<pre><code>http://cn.bing.com:80/search?q=Python&amp;go=搜索&amp;qs=bs&amp;form=QBRE&amp;scope=web
-</code></pre>
+<div class="codehilite"><pre><span></span>http://cn.bing.com:80/search?q=Python&amp;go=搜索&amp;qs=bs&amp;form=QBRE&amp;scope=web
+</pre></div>
+
 
 <ul>
 <li><code>http</code>是协议，访问资源所使用的协议，常见的还有<code>file</code>、<code>https</code>、<code>ftp</code>、<code>smb</code>、<code>mailto</code>、......</li>
@@ -925,8 +930,9 @@
 <li><code>q=Python&amp;go=搜索&amp;qs=bs&amp;form=QBRE&amp;scope=web</code>GET请求所带的查询参数，详细情况自行百度HTTP协议</li>
 </ul>
 <p>所以一般格式是这样的</p>
-<pre><code>协议://主机名[:端口]/[目录][?查询参数]
-</code></pre>
+<div class="codehilite"><pre><span></span>协议://主机名[:端口]/[目录][?查询参数]
+</pre></div>
+
 
 <blockquote>
 <p>方括号内容为非必填，需要取决于服务所需，一般是前后端协商好的</p>
@@ -947,24 +953,26 @@
 <p>然后请出神器Fiddler，还有<code>F12</code></p>
 </blockquote>
 <h3 id="_1">请求报文</h3>
-<pre><code>请求方法 请求URL HTTP版本
+<div class="codehilite"><pre><span></span>请求方法 请求URL HTTP版本
 请求头key1: 请求头value1
 请求头key2: 请求头value2
 请求头key3: 请求头value3
 更多请求头
 
 请求体，balabala的，一般是表单数据
-</code></pre>
+</pre></div>
+
 
 <blockquote>
 <p>请求方法、请求头是比较重要的，自行了解</p>
 </blockquote>
 <h3 id="_2">响应报文</h3>
-<pre><code>HTTP版本 状态码 状态描述
+<div class="codehilite"><pre><span></span>HTTP版本 状态码 状态描述
 响应头
 
 响应data
-</code></pre>
+</pre></div>
+
 
 <blockquote>
 <p>状态码和响应头可多做了解</p>
@@ -1016,10 +1024,39 @@
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1079,6 +1116,15 @@
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>

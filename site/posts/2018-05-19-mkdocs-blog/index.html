@@ -57,8 +57,12 @@
       
     
     
+
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
+<script src="../../assets/javascripts/av-min.js"></script>      <!-- //cdn1.lncld.net/static/js/3.0.4/av-min.js -->
+<script src='../../assets/javascripts/Valine.min.js'></script>  <!-- //unpkg.com/valine/dist/Valine.min.js -->
+
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
@@ -197,6 +201,17 @@
     
     <div class="md-container">
       
+        
+          
+
+
+  
+
+<div class="md-hero md-hero--expand" data-md-component="hero">
+  <div class="md-hero__inner md-grid">
+    9分钟拥有一个自己的博客
+  </div>
+</div>
         
       
       
@@ -893,7 +908,6 @@
                 
                 <h1 id="mkdocs">通过MkDocs搭建个人博客</h1>
 <blockquote>
-<p>9分钟拥有一个自己的博客</p>
 <p>date: 2018-05-19</p>
 </blockquote>
 <hr />
@@ -937,8 +951,9 @@
 <h2 id="1">1. 准备工作</h2>
 <p>MkDocs 是一个以 Python 实现的轻量化静态网站生成器</p>
 <p>所以，首先我们需要安装 Python ，在 Debian/Ubuntu 下只需要通过 apt 安装即可</p>
-<pre><code class="bash">apt install python
-</code></pre>
+<div class="codehilite"><pre><span></span>apt install python
+</pre></div>
+
 
 <div class="admonition warning">
 <p class="admonition-title">兼容的Python版本</p>
@@ -948,17 +963,20 @@
 <p>但事实上我用 Python 3.6 也没有任何问题，所以我建议首先尝试 Python 的最新稳定版，如果存在兼容问题再参考官方推荐</p>
 </div>
 <p>安装Python的第三方包管理器 pip</p>
-<pre><code class="bash">apt install python-pip
-</code></pre>
+<div class="codehilite"><pre><span></span>apt install python-pip
+</pre></div>
+
 
 <p>在Windows环境下安装 Python 和 pip 请参考 <a href="https://www.python.org" target="_blank">python.org</a></p>
 <p>然后通过 pip 安装 MkDocs</p>
-<pre><code class="bash">pip install mkdocs
-</code></pre>
+<div class="codehilite"><pre><span></span>pip install mkdocs
+</pre></div>
+
 
 <p>检查安装情况</p>
-<pre><code class="bash">pip show mkdocs
-</code></pre>
+<div class="codehilite"><pre><span></span>pip show mkdocs
+</pre></div>
+
 
 <p>如果有出现对 MkDocs 的简要描述即安装成功</p>
 <div class="admonition tip">
@@ -971,8 +989,9 @@
 </div>
 <h2 id="2">2. 好的开端</h2>
 <p>MkDocs 给我们提供了一种简单的创建 MkDocs 项目的方式</p>
-<pre><code class="bash">mkdocs new hhh
-</code></pre>
+<div class="codehilite"><pre><span></span>mkdocs new hhh
+</pre></div>
+
 
 <div class="admonition tip">
 <p class="admonition-title">备选方案</p>
@@ -981,19 +1000,22 @@
 </div>
 <p>在终端 cd 到合适的目录，执行上述命令，即可在当前目录创建一个最简单的 MkDocs 项目文件夹，在此他的文件夹名为 <code>hhh</code> ，你可以将其换成任何你喜欢的名字，只要他符合文件夹命名规范</p>
 <p>进入新建的目录</p>
-<pre><code class="bash">cd hhh
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> hhh
+</pre></div>
+
 
 <p>使用 <code>ls</code> 命令或直接在文件资源管理器打开可以看见里面有这些文件</p>
-<pre><code>- docs
+<div class="codehilite"><pre><span></span>- docs
   |- index.md
 - mkdocs.yml
-</code></pre>
+</pre></div>
+
 
 <p>其中 <code>mkdocs.yml</code> 是项目配置文件， <code>docs/</code> 是默认用于存放文档的文件夹，目前里面只有一个 <code>index.md</code> 是文档主页的文档</p>
 <p>在上面所说的目录下，即 <code>hhh/</code> 内，输入以下命令即可呈现文档</p>
-<pre><code class="bash">mkdocs serve
-</code></pre>
+<div class="codehilite"><pre><span></span>mkdocs serve
+</pre></div>
+
 
 <p>输入完之后终端会提示通过 URL http://127.0.0.1:8000 访问，在浏览器地址栏输入它，回车，你就能看见默认的主页</p>
 <p>这是一个开发用的服务器，当你修改项目中的配置文件或文章，他会自动更新并使打开的页面刷新以保持同步。除此之外，使用 <code>mkdocs build</code> 可以构建网站并将静态文件放入配置文件设置的某目录内，，默认是 <code>site/</code> 里面就是一些简单的如 <code>.html</code> 、 <code>.css</code> 、 <code>.js</code> 等静态文件，它们完全可以直接通过如 GitHub Pages 等静态网站服务展示出来，只需要将生成的 <code>site/</code> 目录下的文件放进 GitHub 仓库，开启 GitHub Pages 服务即可。不过先不要急着这么做， MkDocs 有更优雅的方式，我将在该篇最后一节介绍这些部署技巧。</p>
@@ -1010,8 +1032,9 @@
 <p>一个博客，或者文档，最重要的是里面的内容。但是这不意味着我们将容忍外观的丑陋，而且我们还应该有极致追求</p>
 <p>MkDocs 有一个简单的基础主题，就是你刚刚看见那个。除此之外，你还可以在十几种第三方主题中选择一个或自己自定义主题</p>
 <p>在 <code>mkdocs.yml</code> 中加入以下内容</p>
-<pre><code class="yml">theme: 'readthedocs'
-</code></pre>
+<div class="codehilite"><pre><span></span>theme: &#39;readthedocs&#39;
+</pre></div>
+
 
 <p>这将将主题切换至 Read the Docs 的主题，或许你会发现这个主题十分熟悉，因为很多文档都是这么构建的。更多第三方主题详见 <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes" target="_blank">社区wiki</a></p>
 <blockquote>
@@ -1025,14 +1048,16 @@
 <p>GitHub Pages 不只能简单地展示 master 分支内的内容，他还能部署任意一个分支或者 master branch /docs folder 。所以如果我们要在一个 GitHub 仓库中展示 MkDocs 项目并部署其生成的静态网站，我们可以将它们分在两个分支中。将 MkDocs 项目的全部文件放在 master 分支，按照正常方法管理。创建一个专门用于部署静态网站的分支，比如我设置的是 <code>gh-pages</code> ，在里面放置 <code>site/</code> 中的文件，并在该分支开启 GitHub Pages 服务即可。</p>
 <p>不要急着复制 <code>site/</code> 中的文件， MkDocs 提供了 gh-deploy 工具，他可以帮你一键 build、commit、push</p>
 <p>在 <code>mkdocs.yml</code> 文件中加入以下内容</p>
-<pre><code class="yml">remote_branch: gh-pages
-remote_name: origin
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">remote_branch</span><span class="o">:</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<span class="n">remote_name</span><span class="o">:</span> <span class="n">origin</span>
+</pre></div>
+
 
 <p>第一个是用于开启 GitHub Pages 的分支名，第二项是仓库地址名，如果你打算设置成上述样子，那你就可以省略他们，因为他们是默认设置</p>
 <p>然后在终端执行</p>
-<pre><code class="bash">mkdocs gh-deploy
-</code></pre>
+<div class="codehilite"><pre><span></span>mkdocs gh-deploy
+</pre></div>
+
 
 <p>MkDocs 会自动 build 该项目并 commit、push 到该项目仓库的指定分支，第一次使用该功能可能需要登录，按提示操作即可</p>
 <p>如果分支设置、 GitHub Pages 设置、 gh-deploy 设置都正确的话，理论上讲你就已经把最新构建的网站部署了</p>
@@ -1056,10 +1081,39 @@ remote_name: origin
                 
               
               
-                
+<div id="comments_main">
+    <div style="height: 30px;"></div>
+    <hr>
+    <h2>你终于看完了！</h2>
+    <span id="leancloud-visitor" class="leancloud-visitors" data-flag-title="Your Article Title">
+        你可能会好奇这个数字，所以我就直接告诉你吧，<em class="post-meta-item-text""><b>这文章阅读量 </b></em>
+        <b><i class="leancloud-visitors-count">x</i></b>
+    </span>
+    <p>如果你对这篇文章有任何想法或者对Keyboard本人有什么看法，随便什么东西，甚至是“hhh”，都可以在下面留言。随便吐槽，反正我不会看的...</p>
+    <p>这是完全匿名的，当然你也可以留个名，甚至留个邮箱，因为如果你有什么有趣的留言我可能会好奇想认识一下你</p>
+    <p><em>（说实话，我会看的，真的！）</em></p>
+    <div id="vcomments"></div>
+</div>
+<script>
+    document.getElementById("leancloud-visitor").id = window.location.pathname;
+    let comments_switch = document.getElementById("comments_switch");
+    if (!comments_switch || comments_switch.innerText != "False") {
+        new Valine({
+            el: '#vcomments',
+            appId: '9nBhQjarudnTltm9uQgqT04z-gzGzoHsz',
+            appKey: 'jpCWh05kBHWtjvxg6pjbPiMP',
+            placeholder: 'e.g. hhh',
+            meta: ['nick', 'mail'],
+            pageSize: 5,
+            visitor: true
+        })
+    }
+    else {
+        document.getElementById("comments_main").hidden = true;
+    }
+    
+</script>
 
-
-              
             </article>
           </div>
         </div>
@@ -1119,6 +1173,15 @@ remote_name: origin
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/keybrl" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://steamcommunity.com/id/keybrl" class="md-footer-social__link fa fa-stream"></a>
+    
+  </div>
+
       
     </div>
   </div>

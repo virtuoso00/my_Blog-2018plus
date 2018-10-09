@@ -1,3 +1,6 @@
+hero: 欢迎各位强者光临寒舍..
+
+<span id="comments_switch" hidden>False</span>
 # **'Hello World!'**
 
 欢迎来到 Keyboard L 的个人博客

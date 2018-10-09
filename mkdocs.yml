@@ -70,6 +70,11 @@ extra:
     search:
         language: 'en, jp'
     repo_icon: 'github'
+    social:
+    - type: 'github'
+      link: 'https://github.com/keybrl'
+    - type: 'stream'
+      link: 'https://steamcommunity.com/id/keybrl'
 
 # Preview controls
 #use_directory_urls: true
@@ -77,5 +82,5 @@ extra:
 dev_addr: 0.0.0.0:80
 
 # Formatting options
-markdown_extensions: ['admonition', 'markdown_newtab', 'footnotes']
+markdown_extensions: ['admonition', 'markdown_newtab', 'footnotes', 'meta', 'codehilite']
 #plugins: ['search']
