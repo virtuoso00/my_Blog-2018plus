@@ -48,6 +48,7 @@ pages:
         - '概率神教 - 优秀的问题解决方案': 'projects/2017-11-19-Project-Coin.md'
         - 'Tetris': 'projects/2017-06-12-Project-Tetris.md'
         - '生命游戏': 'projects/2017-04-30-Project-Game_or_Life.md'
+    - 留言板: 'board.md'
     - 友情链接: 'links.md'
     - 小额赞助: 'donate.md'
 
@@ -73,8 +74,10 @@ extra:
     social:
     - type: 'github'
       link: 'https://github.com/keybrl'
-    - type: 'stream'
+    - type: 'steam'
       link: 'https://steamcommunity.com/id/keybrl'
+    - type: 'envelope'
+      link: 'mailto:keyboard-l@outlook.com'
 
 # Preview controls
 #use_directory_urls: true
