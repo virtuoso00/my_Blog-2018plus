@@ -4,6 +4,7 @@
 
 - 被代码耽误的文学家**Maozu** - [Nothing important](http://blog.maozu.ink/)
 - 技能树全满之**尹大人** - [Review·何以解忧，唯有暴富](https://www.yichya.review/)
+- 精通Web后端之**王大人** - [-Finley- - 博客园](https://www.cnblogs.com/Finley)
 - 精通科学计算的数学天才**陈大佬** - [Ciaran's Gondolin - 磐石之城、隐秘之地、守卫之塔、盛开在平原上的鲜花](https://blog.ciaran.cn/)
 - 手搓堆排序之**zsr** - [Stephen的小本本](http://www.stephenzhang.me/)
 - 全能型学霸**李主席** - [Stay Hungry, Stay Foolish.](https://tobiaslee.top/)
