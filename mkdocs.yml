@@ -16,6 +16,7 @@ pages:
     - 主页: 'index.md'
     - 文章:
         - '无法分类的文章 - 导读': 'posts/index.md'
+        - 'Windows 常用注册表项': 'posts/2018-10-23-Windows-regedit.md'
 #        - 'Nginx常用配置套路（未完成）': 'posts/2018-07-02-nginx-configure.md'
 #        - 'Python-Markdown支持的Markdown扩展（未完成）': 'posts/2018-05-24-python-markdown.md'
         - '通过MkDocs搭建个人博客': 'posts/2018-05-19-mkdocs-blog.md'
